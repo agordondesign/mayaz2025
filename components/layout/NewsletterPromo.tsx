@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+//import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { uuid } from '@sanity/uuid';
 import { toast } from 'react-toastify';
@@ -35,7 +35,7 @@ export default function Mailer(
 	const data = false;
 	const submission = true;
 	const [showCode, setShowCode] = useState(false);
-	const [title, setTitle] = useState('');
+	//const [title, setTitle] = useState('');
 	const [userEmail, setUserEmail] = useState('');
 	const [userPhone, setUserPhone] = useState('');
 	//const [phone, setPhone] = useState('');

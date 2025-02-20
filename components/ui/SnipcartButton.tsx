@@ -32,7 +32,7 @@ type Props = {
 	book?: boolean;
 };
 
-function SnipCartButton({ product, book }: Props) {
+function SnipCartButton({ product }: Props) {
 	return (
 		<div
 			className={`${

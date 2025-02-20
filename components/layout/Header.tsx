@@ -11,9 +11,7 @@ import {
 } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import SearchInput from '../ui/SearchInput';
-import { FiSearch } from 'react-icons/fi';
-import { CiSearch } from 'react-icons/ci';
-import { CircleUser, CircleUserRound, Search, ShoppingBag } from 'lucide-react';
+import { CircleUser, Search, ShoppingBag } from 'lucide-react';
 
 export default function Header() {
 	//const [selected, setSelected] = useState('');

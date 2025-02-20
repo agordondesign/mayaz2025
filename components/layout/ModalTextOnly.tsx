@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
-import { FiAlertCircle } from 'react-icons/fi';
 import NewsletterPromo from './NewsletterPromo';
 
 type ModalTextOnlyProps = {

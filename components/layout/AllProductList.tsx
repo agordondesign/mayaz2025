@@ -1,6 +1,6 @@
 'use client';
-import { getProductBySlug, getProducts } from '@/lib/api';
-import { client } from '@/sanity/lib/client';
+//import { getProductBySlug, getProducts } from '@/lib/api';
+//import { client } from '@/sanity/lib/client';
 import React, { useState } from 'react';
 import ClientSideRoute from '../common/ClientSideRoute';
 import { urlFor } from '@/sanity/lib/image';

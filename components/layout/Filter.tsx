@@ -6,7 +6,7 @@ type FilterProps = {
 	filters: { _id: string; title: string }[];
 };
 
-export default function Filter({ filters, activeTag, handleTag }: FilterProps) {
+export default function Filter({ filters }: FilterProps) {
 	return (
 		<div className="flex gap-4 w-full text-sm">
 			<h1>Filter:</h1>

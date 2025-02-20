@@ -5,7 +5,7 @@ import { urlFor } from '@/sanity/lib/image';
 import Image from 'next/image';
 import type { TypedObject } from '@portabletext/types';
 import { motion } from 'framer-motion';
-import { RxColorWheel } from 'react-icons/rx';
+//import { RxColorWheel } from 'react-icons/rx';
 
 type ProductListProps = {
 	products: {

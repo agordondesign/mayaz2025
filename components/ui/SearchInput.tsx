@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
 //import { FiSearch } from 'react-icons/fi';
-import { CiSearch } from 'react-icons/ci';
+//import { CiSearch } from 'react-icons/ci';
 import ClientSideRoute from '../common/ClientSideRoute';
 import { Search } from 'lucide-react';
 

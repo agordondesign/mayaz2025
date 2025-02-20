@@ -1,5 +1,5 @@
 import {
-	getCollections,
+	//getCollections,
 	getLandingPage,
 	getProducts,
 	getSiteSettings,
@@ -12,7 +12,7 @@ export default async function page() {
 	const landingPage = await getLandingPage();
 	const products = await getProducts();
 	const sorting = await getSorting();
-	const collections = await getCollections();
+	//const collections = await getCollections();
 	return (
 		<div className="container mx-auto space-y-6 py-6">
 			<div>{siteSettings.title}</div>
@@ -27,11 +27,11 @@ export default async function page() {
 					<span key={sort.sortValue}>{sort.sortLabel}</span>
 				))}
 			</div>
-			<div className="space-x-2">
+			{/*<div className="space-x-2">
 				{collections.map((collection: { _id: string; title: string }) => (
 					<span key={collection._id}>{collection.title}</span>
 				))}
-			</div>
+			</div>*/}
 		</div>
 	);
 }
