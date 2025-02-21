@@ -17,27 +17,28 @@ export default function Banner() {
 				<div className=" mt-16">
 					<Tagline />
 					<section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 max-w-[96rem] mx-auto">
-						<div className="border border-mayazBorder/60 h-[150px] p-4">
+						<div className="border border-mayazBorder/60 p-4">
 							<FiBox size={20} />
 							<h3 className="text-sm py-2 font-medium">Free Shipping</h3>
 							<p className="text-xs">Free shipping for nail polish ONLY</p>
 							<p className="text-xs">Guaranteed 2 day delivery</p>
 						</div>
-						<div className="border border-mayazBorder/60 h-[150px] p-4">
+						<div className="border border-mayazBorder/60 p-4">
 							<FiBox size={20} />
 							<h3 className="text-sm py-2 font-medium">Local Pick-up</h3>
 							<p className="text-xs">
-								Friday after Jumu&apos;ah Mon - Sun 4:30 pm - 6:30 pm
+								Friday after Jumu&apos;ah
+								{/*Mon - Sun 4:30 pm - 6:30 pm*/}
 							</p>
 							<p className="text-xs">Masjid Rahmah, Newark, NJ</p>
 						</div>
-						<div className="border border-mayazBorder/60 h-[150px] p-4">
+						<div className="border border-mayazBorder/60 p-4">
 							<FiBox size={20} />
 							<h3 className="text-sm py-2 font-medium">Priority Shipping</h3>
 							<p className="text-xs">USPS priorirty mail</p>
 							<p className="text-xs">Guaranteed 1 day delivery</p>
 						</div>
-						<div className="border border-mayazBorder/60 h-[150px] p-4">
+						<div className="border border-mayazBorder/60 p-4">
 							<FiBox size={20} />
 							<h3 className="text-sm py-2 font-medium">Contact Us</h3>
 							<p className="text-xs">Chat with our concierge at any time.</p>

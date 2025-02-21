@@ -15,6 +15,7 @@ export default async function page() {
 	);
 	return (
 		<main className="flex flex-col w-full gap-12 xl:gap-16 max-w-[90rem] mx-auto mt-0">
+			<h1>Her Story : her-story/page.tsx</h1>
 			<section className="flex flex-col gap-4 w-full mt-2 text-sm">
 				{/* biome-ignore lint/suspicious/noExplicitAny: <explanation> */}
 				{currentPage?.sectionModule?.map((section: any) => (

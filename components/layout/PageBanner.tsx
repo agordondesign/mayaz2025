@@ -99,7 +99,11 @@ export default function PageBanner({ collection }: PageBannerProps) {
 									? 'object-right-top'
 									: 'object-center'
 							}
-							${collection?.bannerSize === 'full-width' ? 'w-full h-auto' : 'h-full w-auto'}`}
+							${
+								collection?.bannerSize === 'full-width'
+									? 'w-full h-auto'
+									: 'w-full h-auto md:h-full md:w-auto'
+							}`}
 								style={{
 									objectPosition:
 										collection?.bannerPosition === 'object-top'
@@ -126,7 +130,7 @@ export default function PageBanner({ collection }: PageBannerProps) {
 										</span>
 									</div>
 								</div>
-								<div className="w-full h-full max-h-[441px] sm:max-h-[681px] md:max-h-[450px] lg:max-h-[575px] xl:max-h-[699px] overflow-hidden">
+								<div className="w-full h-full max-h-[441px] sm:max-h-[681px] md:max-h-[425px] lg:max-h-[575px] xl:max-h-[699px] overflow-hidden">
 									{collection?.banner && (
 										<Image
 											src={urlFor(collection?.banner).url()}
