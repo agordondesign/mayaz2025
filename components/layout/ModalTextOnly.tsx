@@ -10,15 +10,14 @@ import NewsletterPromo from './NewsletterPromo';
 };*/
 
 export default function ModalTextOnly() {
-	const [submitted, setSubmitted] = useState(false);
+	const [submitted, setSubmitted] = useState('');
 	const [showModal, setShowModal] = useState(true); //set to false to disable modal
 
 	const childtoParent = (childData: boolean) => {
 		setShowModal(childData);
 		//lockScrollParent(showModal);
 	};
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-	const submittedEmail = (emailData: any) => {
+	const submittedEmail = (emailData: string) => {
 		console.log('emailData', emailData);
 		setSubmitted(emailData);
 	};
@@ -38,9 +37,9 @@ export default function ModalTextOnly() {
 				{/*content*/}
 				<NewsletterPromo
 					childParent={childtoParent}
-					submittedEmail={submittedEmail}
-					data={undefined}
-					submission={undefined}
+					//submittedEmail={submittedEmail}
+					//data={{ email: '', phone: '' }}
+					//submission={submitted}
 					setIsOpen={showModal}
 				/>
 			</div>
