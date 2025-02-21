@@ -9,7 +9,7 @@ import BreakPoints from '@/components/layout/BreakPoints';
 import Header from '@/components/layout/Header';
 //import Modal from '@/components/ui/Modal';
 import { getLandingPage } from '@/lib/api';
-import { Fragment } from 'react';
+//import { Fragment } from 'react';
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
