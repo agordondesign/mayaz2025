@@ -7,20 +7,16 @@ import { toast } from 'react-toastify';
 import { client } from '@/sanity/lib/client';
 
 /*type Props = {
-	data: any;
-	submission: any;
+	data: { email: string; phone: string };
+	submission: boolean;
 	children: any;
 };*/
 
 type NewsletterProps = {
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-	data: any;
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-	submission: any;
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-	childParent: any;
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-	submittedEmail: any;
+	data: { email: string; phone: string };
+	submission: boolean;
+	childParent: (data: boolean) => void;
+	submittedEmail: (email: string) => void;
 	setIsOpen: boolean;
 };
 
@@ -30,7 +26,7 @@ export default function Mailer(
 	{ childParent, submittedEmail }: NewsletterProps
 ) {
 	const data = false;
-	const submission = true;
+	const submission = 'true';
 	const [showCode, setShowCode] = useState(false);
 	//const [title, setTitle] = useState('');
 	const [userEmail, setUserEmail] = useState('');

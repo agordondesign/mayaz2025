@@ -13,8 +13,7 @@ export default function ModalTextOnly() {
 	const [submitted, setSubmitted] = useState(false);
 	const [showModal, setShowModal] = useState(true); //set to false to disable modal
 
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-	const childtoParent = (childData: any) => {
+	const childtoParent = (childData: boolean) => {
 		setShowModal(childData);
 		//lockScrollParent(showModal);
 	};
