@@ -14,15 +14,15 @@ import ProductByCollection from '@/components/layout/ProductByCollection';
 import PageTitle from '@/components/ui/PageTitle';
 
 type PageProps = {
-	//_id: string;
-	/*slug: {
+	_id: string;
+	slug: {
 		current: string;
-	};*/
+	};
 
-	params: {
+	params: Promise<{
 		slug: string;
 		_id: string;
-	};
+	}>;
 	searchParams: URLSearchParams;
 };
 
@@ -54,7 +54,7 @@ export default async function page({ params }: PageProps) {
 	//const collections = await getProductsByCollection(slug);
 	const currentPage = await pages?.find(
 		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-		(page: any) => page.slug.current === params.slug
+		(page: any) => page.slug.current === slug
 	);
 	return (
 		<main className="flex flex-col w-full max-w-[96rem] mx-auto">
