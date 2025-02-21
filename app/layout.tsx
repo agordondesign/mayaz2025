@@ -7,7 +7,7 @@ import TickerBar from '@/components/layout/TickerBar';
 import Footer from '@/components/layout/Footer';
 import BreakPoints from '@/components/layout/BreakPoints';
 import Header from '@/components/layout/Header';
-import Modal from '@/components/ui/Modal';
+//import Modal from '@/components/ui/Modal';
 import { getLandingPage } from '@/lib/api';
 import { Fragment } from 'react';
 
@@ -37,12 +37,13 @@ export default async function RootLayout({
 					{children}
 					<Footer />
 				</div>
-				{/* biome-ignore lint/suspicious/noExplicitAny: <explanation> */}
+				{/*
 				{landingPage?.sectionModule?.map((modal: any) => (
 					<Fragment key={modal?._id}>
 						{modal?._type === 'modalContent' && <Modal content={modal} />}
 					</Fragment>
 				))}
+					*/}
 				<SnipCart />
 			</body>
 		</html>
