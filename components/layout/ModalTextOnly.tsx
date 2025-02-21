@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import NewsletterPromo from './NewsletterPromo';
 
-type ModalTextOnlyProps = {
+/*type ModalTextOnlyProps = {
 	setIsOpen: (isOpen: boolean) => void;
 	content: {
 		header: string;
 	};
-};
+};*/
 
 export default function ModalTextOnly() {
 	const [submitted, setSubmitted] = useState(false);

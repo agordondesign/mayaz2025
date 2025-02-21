@@ -83,8 +83,7 @@ export default function Mailer(
 			className: 'toasty',
 		});
 
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-	function copyToClipboard(e: any) {
+	function copyToClipboard() {
 		//navigator.clipboard.writeText('shukran10!');
 		//notify();
 		//alert('Copied to clipboard!');
@@ -92,7 +91,7 @@ export default function Mailer(
 		notify();
 	}
 
-	function validateEmail(email: string, phone: string) {
+	function validateEmail(userEmail: string, userPhone: string) {
 		if (validate(userEmail) && validatePhone(userPhone)) {
 			setShowCode(!showCode);
 		}
