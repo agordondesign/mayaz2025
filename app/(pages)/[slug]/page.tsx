@@ -23,7 +23,7 @@ type PageProps = {
 		slug: string;
 		_id: string;
 	}>;
-	searchParams: URLSearchParams;
+	//searchParams: URLSearchParams;
 };
 
 /*export async function getStaticPaths() {
