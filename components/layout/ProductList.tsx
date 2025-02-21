@@ -116,7 +116,7 @@ export default function ProductList({
 				</div>
 			)}
 			<div
-				className={`grid grid-cols-2 ${
+				className={`grid grid-cols-2 md:grid-cols-3 ${
 					columns === 6
 						? 'lg:grid-cols-6'
 						: columns === 5

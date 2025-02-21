@@ -126,14 +126,14 @@ export default function PageBanner({ collection }: PageBannerProps) {
 										</span>
 									</div>
 								</div>
-								<div className="w-full h-full max-h-[441px] sm:max-h-[681px] md:max-h-[457px] lg:max-h-[575px] xl:max-h-[699px] overflow-hidden">
+								<div className="w-full h-full max-h-[441px] sm:max-h-[681px] md:max-h-[450px] lg:max-h-[575px] xl:max-h-[699px] overflow-hidden">
 									{collection?.banner && (
 										<Image
 											src={urlFor(collection?.banner).url()}
 											alt={collection?.banner?.alt}
 											width={2000}
 											height={700}
-											className="object-cover object-left-top w-auto h-full aspect-square md:aspect-auto"
+											className="object-cover object-left-top w-full h-auto lg:w-auto lg:h-full aspect-square md:aspect-auto"
 										/>
 									)}
 								</div>
