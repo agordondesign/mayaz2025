@@ -3,10 +3,10 @@ import React from 'react';
 import { getProductBySlug } from '@/lib/api';
 
 type HerVirtueProductProp = {
-	params: {
+	params: Promise<{
 		slug: string;
 		_id: string;
-	};
+	}>;
 };
 
 export default async function page({ params }: HerVirtueProductProp) {
