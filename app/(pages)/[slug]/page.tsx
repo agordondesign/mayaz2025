@@ -26,13 +26,13 @@ type PageProps = {
 	searchParams: URLSearchParams;
 };
 
-export async function getStaticPaths() {
+/*export async function getStaticPaths() {
 	const paths = await generateStaticParams();
 	return {
 		paths,
 		fallback: false,
 	};
-}
+}*/
 
 export async function generateStaticParams() {
 	const query = groq`*[_type == "page"] {
