@@ -72,6 +72,10 @@ export default function ProductList({
 		}
 		return true;
 	});
+	const formatter = new Intl.NumberFormat('en-US', {
+		style: 'currency',
+		currency: 'USD',
+	});
 
 	return (
 		<section>
@@ -184,10 +188,14 @@ export default function ProductList({
 															{product.productPricing.markdownPrice ? (
 																<>
 																	<span className="line-through opacity-50">
-																		${product.productPricing.price}.00
+																		{formatter.format(
+																			product.productPricing.price
+																		)}
 																	</span>
 																	<span>
-																		${product.productPricing.markdownPrice}.00
+																		{formatter.format(
+																			product.productPricing.markdownPrice
+																		)}
 																	</span>
 																	{product.productPricing.discount && (
 																		<span className="flex items-center text-xs bg-teal-500 rounded-full text-white px-2 pt-0.5 pb-[1px]">
@@ -198,7 +206,9 @@ export default function ProductList({
 															) : (
 																<>
 																	<span>
-																		${product.productPricing.price}.00
+																		{formatter.format(
+																			product.productPricing.price
+																		)}
 																	</span>
 																	{product.productPricing.discount && (
 																		<span className="flex items-center text-xs bg-teal-500 rounded-full text-white px-2 py-0.5 pb-[1px]">

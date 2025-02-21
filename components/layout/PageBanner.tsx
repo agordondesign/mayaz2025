@@ -126,7 +126,7 @@ export default function PageBanner({ collection }: PageBannerProps) {
 										</span>
 									</div>
 								</div>
-								<div className="w-full h-full">
+								<div className="w-full h-full max-h-[441px] sm:max-h-[681px] md:max-h-[457px] lg:max-h-[575px] xl:max-h-[699px] overflow-hidden">
 									{collection?.banner && (
 										<Image
 											src={urlFor(collection?.banner).url()}
