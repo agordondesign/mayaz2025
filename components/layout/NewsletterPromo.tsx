@@ -279,12 +279,14 @@ export default function Mailer(
 			</div>
 		</div>
 	);
-}
-// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-function setUserData(arg0: any) {
+} // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+// biome-ignore lint/complexity/noUselessLoneBlockStatements: <explanation>
+{
+	/*function setUserData(arg0: any) {
 	throw new Error('Function not implemented.');
 }
 
 function setShowCode(arg0: boolean) {
 	throw new Error('Function not implemented.');
+}*/
 }

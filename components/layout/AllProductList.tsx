@@ -6,15 +6,15 @@ import ClientSideRoute from '../common/ClientSideRoute';
 import { urlFor } from '@/sanity/lib/image';
 import Image from 'next/image';
 
-export async function getStaticProps() {
-	const query = `*[_type == "product"]`;
-	//const initialProducts = await client.fetch(query);
-	//const initialProducts = await getProducts();
+//export async function getStaticProps() {
+//const query = `*[_type == "product"]`;
+//const initialProducts = await client.fetch(query);
+//const initialProducts = await getProducts();
 
-	return {
-		//props: { initialProducts },
-	};
-}
+//return {
+//props: { initialProducts },
+//};
+//}
 
 interface AllProductListProps {
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
@@ -31,6 +31,8 @@ export default function AllProductList({
 	const [categoryFilter, setCategoryFilter] = useState('');
 	const [sizeFilter, setSizeFilter] = useState('');
 
+	{
+		/*
 	const handleAllFilter = (category: string, size: string) => {
 		setCategoryFilter(category);
 		setSizeFilter(size);
@@ -39,18 +41,18 @@ export default function AllProductList({
 		} else {
 			setFilteredProducts(
 				initialProducts.filter(
-					// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 					(product: any) => product.collection.name === category
 				) &&
 					initialProducts.filter(
-						// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 						(product: any) =>
-							// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 							product.variantSizes?.filter((size: any) => size.size === size)
 					)
 			);
 		}
 	};
+*/
+		// biome-ignore lint/complexity/noUselessLoneBlockStatements: <explanation>
+	}
 
 	const handleCategoryFilter = (category: string) => {
 		setCategoryFilter(category);
@@ -189,6 +191,10 @@ export default function AllProductList({
 							<div>
 								<div className="text-sm w-full text-mayazDark">
 									<p className="gap-2 font-medium">$75.00 USD</p>
+									<span className="hidden">
+										{categoryFilter}
+										{sizeFilter}
+									</span>
 								</div>
 							</div>
 						</div>

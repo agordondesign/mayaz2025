@@ -48,6 +48,7 @@ export default function ModalTextOnly({
 					setIsOpen={showModal}
 				/>
 			</div>
+			<span className="hidden">hide error {submitted}</span>
 		</motion.div>
 	);
 }
