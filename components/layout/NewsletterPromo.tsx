@@ -6,14 +6,11 @@ import { uuid } from '@sanity/uuid';
 import { toast } from 'react-toastify';
 import { client } from '@/sanity/lib/client';
 
-type Props = {
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+/*type Props = {
 	data: any;
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	submission: any;
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	children: any;
-};
+};*/
 
 type NewsletterProps = {
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>

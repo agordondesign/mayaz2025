@@ -9,10 +9,7 @@ type ModalTextOnlyProps = {
 	};
 };
 
-export default function ModalTextOnly({
-	setIsOpen,
-	content,
-}: ModalTextOnlyProps) {
+export default function ModalTextOnly() {
 	const [submitted, setSubmitted] = useState(false);
 	const [showModal, setShowModal] = useState(true); //set to false to disable modal
 
