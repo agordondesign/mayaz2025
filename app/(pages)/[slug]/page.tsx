@@ -12,6 +12,7 @@ import FeatureBanner from '@/components/layout/FeatureBanner';
 import PageContent from '@/components/layout/PageContent';
 import ProductByCollection from '@/components/layout/ProductByCollection';
 import PageTitle from '@/components/ui/PageTitle';
+import HerStory from '@/components/layout/HerStory';
 
 type PageProps = {
 	/*_id: string;
@@ -124,6 +125,7 @@ export default async function page({ params }: PageProps) {
 					</div>
 				))}
 			</div>
+			<HerStory />
 		</main>
 	);
 }

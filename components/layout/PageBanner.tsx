@@ -102,7 +102,7 @@ export default function PageBanner({ collection }: PageBannerProps) {
 							${
 								collection?.bannerSize === 'full-width'
 									? 'w-full h-auto'
-									: 'w-full h-auto md:h-full md:w-auto'
+									: 'w-full h-auto min-h-[250px] md:h-full md:w-auto'
 							}`}
 								style={{
 									objectPosition:
