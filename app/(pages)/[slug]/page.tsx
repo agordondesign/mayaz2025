@@ -14,10 +14,10 @@ import ProductByCollection from '@/components/layout/ProductByCollection';
 import PageTitle from '@/components/ui/PageTitle';
 
 type PageProps = {
-	_id: string;
+	/*_id: string;
 	slug: {
 		current: string;
-	};
+	};*/
 
 	params: Promise<{
 		slug: string;
