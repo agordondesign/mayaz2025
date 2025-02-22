@@ -37,7 +37,7 @@ export default function HerStory() {
 					<section className="flex flex-col lg:flex-row justify-center items-center w-full h-full max-w-full mx-auto bg-black overflow-hidden">
 						<div className="w-full lg:h-full xl:w-full max-h-[300px] md:max-h-[350px] lg:max-h-full overflow-hidden lg:order-last">
 							<Image
-								src="/temp/1c9309aff2a433461aee3c7b84bd25d1.jpg"
+								src="/images/1c9309aff2a433461aee3c7b84bd25d1.jpg"
 								alt="placeholder"
 								width={474}
 								height={474}
@@ -95,7 +95,7 @@ export default function HerStory() {
 								</div>
 								<div className="hidden lg:flex justify-center items-center w-full mx-auto">
 									<Image
-										src="/temp/Logo_Full_Blk.svg"
+										src="/Logo_Full_Blk.svg"
 										alt="placeholder"
 										width={474}
 										height={592}
@@ -119,7 +119,7 @@ export default function HerStory() {
 					</section>
 					<section className="relative flex flex-col lg:flex-row justify-end items-center w-full mx-auto lg:max-h-[600px] overflow-hidden">
 						<Image
-							src="/temp/Jilbab.webp"
+							src="/images/Jilbab.webp"
 							alt="placeholder"
 							width={474}
 							height={592}
