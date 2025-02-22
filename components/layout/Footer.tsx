@@ -54,7 +54,7 @@ export default function Banner() {
 										alt="Mayaz Logo"
 										width={134}
 										height={43}
-										className="w-auto h-12"
+										className="w-auto h-8 md:h-10 lg:h-12"
 									/>
 								</div>
 							</div>

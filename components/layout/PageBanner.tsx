@@ -80,9 +80,9 @@ export default function PageBanner({ collection }: PageBannerProps) {
 									style={{
 										objectFit: 'contain',
 									}}
-									className="w-auto h-full max-h-[70px] md:max-h-[80px]"
+									className="w-auto h-full max-h-[62px] lg:max-h-[70px]"
 								/>{' '}
-								<span className="tracking-[0.15em] text-base md:text-lg">
+								<span className="tracking-[0.15em] text-sm lg:text-base">
 									{collection?.bannerTitle}
 								</span>
 							</div>

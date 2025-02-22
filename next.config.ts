@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
 				hostname: 'cdn.sanity.io',
 				pathname: '**',
 			},
+			{
+				protocol: 'https',
+				hostname: 'mayaz2025-pi.vercel.app',
+				pathname: '**',
+			},
 		],
 	},
 };

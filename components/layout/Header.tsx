@@ -239,7 +239,7 @@ export default function Header() {
 											initial="closed"
 											animate="open"
 											variants={sidebarVariants}
-											className="absolute text-lg h-full top-0 left-0 bottom-0 w-full max-w-[312px] sm:max-w-[400px] pt-4 bg-white drop-shadow-xl z-20 border-r border-gray-100 overflow-scroll transition-fix"
+											className="absolute text-lg h-full top-0 left-0 bottom-0 w-full max-w-[312px] sm:max-w-[400px] pt-4 bg-mayazBody drop-shadow-xl z-20 border-r border-mayazBorder overflow-scroll transition-fix"
 										>
 											<motion.li
 												variants={sidebarItemVariants}
@@ -279,7 +279,7 @@ export default function Header() {
 											<motion.li variants={sidebarItemVariants} className="">
 												<Link
 													href="/showroom"
-													className="block px-16 py-4 hover:bg-gray-100 hover:cursor-pointer"
+													className="block px-16 py-4 hover:bg-mayaz/20 hover:cursor-pointer"
 													onClick={menuToggle}
 												>
 													Showroom
@@ -291,7 +291,7 @@ export default function Header() {
 											>
 												<Link
 													href="/jilbabs-and-abayas"
-													className="block px-16 py-4 hover:bg-gray-100"
+													className="block px-16 py-4 hover:bg-mayaz/20"
 													onClick={menuToggle}
 												>
 													Jilbābs & Abāyas
@@ -303,7 +303,7 @@ export default function Header() {
 											>
 												<Link
 													href="/khimars-and-capes"
-													className="block px-16 py-4 hover:bg-gray-100"
+													className="block px-16 py-4 hover:bg-mayaz/20"
 													onClick={menuToggle}
 												>
 													Khimārs & Capes
@@ -315,7 +315,7 @@ export default function Header() {
 											>
 												<Link
 													href="/niqabs"
-													className="block px-16 py-4 hover:bg-gray-100"
+													className="block px-16 py-4 hover:bg-mayaz/20"
 													onClick={menuToggle}
 												>
 													Niqābs
@@ -324,7 +324,7 @@ export default function Header() {
 											<motion.li variants={sidebarItemVariants} key="niqabs">
 												<Link
 													href="/kids-garments"
-													className="block px-16 py-4 hover:bg-gray-100"
+													className="block px-16 py-4 hover:bg-mayaz/20"
 													onClick={menuToggle}
 												>
 													Kids Garments
@@ -336,7 +336,7 @@ export default function Header() {
 											>
 												<Link
 													href="/accessories"
-													className="block px-16 py-4 hover:bg-gray-100"
+													className="block px-16 py-4 hover:bg-mayaz/20"
 													onClick={menuToggle}
 												>
 													Accessories
@@ -345,7 +345,7 @@ export default function Header() {
 											<motion.li variants={sidebarItemVariants} key="books">
 												<Link
 													href="/books"
-													className="block px-16 py-4 hover:bg-gray-100"
+													className="block px-16 py-4 hover:bg-mayaz/20"
 													onClick={menuToggle}
 												>
 													Books
@@ -357,7 +357,7 @@ export default function Header() {
 											>
 												<Link
 													href="/mersi-nail-polish"
-													className="flex gap-2 justify-start items-baseline px-16 py-4 hover:bg-gray-100"
+													className="flex gap-2 justify-start items-baseline px-16 py-4 hover:bg-mayaz/20"
 													onClick={menuToggle}
 												>
 													<Image
@@ -376,7 +376,7 @@ export default function Header() {
 											<motion.li variants={sidebarItemVariants} key="sale">
 												<Link
 													href="/sale"
-													className="block px-16 py-4 font-medium tracking-[0.75em] text-xl hover:bg-gray-100"
+													className="block px-16 py-4 font-medium tracking-[0.75em] text-xl hover:bg-mayaz/20"
 													onClick={menuToggle}
 												>
 													SALE
@@ -389,7 +389,7 @@ export default function Header() {
 											>
 												<Link
 													href="/her-bookshelf"
-													className="block px-16 py-4 hover:bg-gray-100"
+													className="block px-16 py-4 hover:bg-mayaz/20"
 													onClick={menuToggle}
 												>
 													Suite Locs
@@ -403,7 +403,7 @@ export default function Header() {
 												//exit={{ y: '100%', opacity: 0 }}
 												//transition={{ delay: 0.5 }}
 												key="account"
-												className="absolute bottom-0 border-t border-mayazBorder/70 w-full hover:bg-gray-100"
+												className="absolute bottom-0 border-t border-mayazBorder/70 w-full hover:bg-mayaz/20"
 											>
 												<button
 													type="button"
