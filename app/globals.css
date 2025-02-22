@@ -193,40 +193,73 @@ body {
 /** SNIPCART STYLES */
 #snipcart {
 	--color-default: #000000;
-	--bgColor-default: #fdfcfb; /* mayazBody */
-	--bgColor-alt: #fdfcfb; /* mayazBody */
+	--bgColor-default: #f3f1f0; /* mayazBorder/10 */
+	--bgColor-alt: #f3f1f0; /* mayazBorder/10 */
 	--borderColor-default: #d3cfc5; /* mayazBorder */
+	--bgColor-error: #f3bdba; /* mayazBorder/10 */
 
 	--color-input: #000000;
-	--color-input-hover: #ebeae8; /* imageBox */
-	--color-input-focus: #f8f8f8;
-	--bgColor-input: #fdfcfb; /* mayazBody */
+	--color-input-hover: none; /* imageBox */
+	--color-input-focus: #776e61; /* mayazDarker */
+	--bgColor-input: #f3f1f0; /* mayazBorder/10 */
 	--borderColor-input: #d3cfc5; /* mayazBorder */
-	--bgColor-input-hover: #24242e;
-	--bgColor-input-focus: #24242e;
+	--bgColor-input-hover: none;
+	--bgColor-input-focus: #f3f1f0; /* mayazBorder/10 */
+	--bgColor-input-active: #f3f1f0; /* mayazBorder/10 */
 	--borderColor-input: #d3cfc5; /* mayazBorder */
-	--borderColor-input-hover: #d3cfc5; /* mayazBorder */
-	--borderColor-input-focus: #d3cfc5; /* mayazBorder */
-	--shadow-input-focus: 0 5px 10px -3px rgba(56, 56, 72, 0.3);
+	--borderColor-input-hover: #958a79; /* mayazDark */
+	--borderColor-input-focus: #776e61; /* mayazDarker */
+	--shadow-input-focus: none;
+	--bgColor-input-checked: #958a79; /* mayaz */
+	--border-input-checked: #958a79; /* mayaz */
+	--border-input-checked-focus: #958a79; /* mayaz */
+	--border-input-checked-active: #958a79; /* mayaz */
 
-	--color-inputLabel: #f8f8f8;
+	--color-inputLabel: #776e61; /* mayazDarker */
 
-	--color-link: #f8f8f8;
+	--color-link: #958a79; /* mayazDark */
+	--color-link-hover: #000000; /* mayazDarker */
 
-	--bgColor-modal: #383848;
+	--bgColor-modal: #e3e1df; /* new color */
 	--bgColor-modalVeil: #383848;
 
-	--bgColor-buttonPrimary: #383848;
-	--borderColor-buttonPrimary: #d3cfc5; /* mayazBorder */
-	--bgColor-buttonPrimary-hover: #f8f8f8;
-	--color-buttonPrimary-hover: #383848;
+	--bgColor-buttonPrimary: #000000;
+	--borderColor-buttonPrimary: #0000;
+	--bgColor-buttonPrimary-hover: #958a79; /* mayazDark */
+	--bgColor-buttonPrimary-active: #776e61; /* mayazDarker */
+	--color-buttonPrimary-hover: #f3f1f0;
+	--shadow-buttonPrimary-hover: none;
+	--shadow-buttonPrimary-active: none;
+	--shadow-buttonPrimary-focus: none;
 
-	--bgColor-buttonSecondary: #383848;
-	--color-buttonSecondary: #f8f8f8;
-	--color-buttonSecondary-hover: #88766a;
-	--color-buttonSecondary-active: #88766a;
-	--bgColor-buttonSecondary-hover: #383848;
-	--bgColor-buttonSecondary-active: #383848;
+	--bgColor-buttonSecondary: #ccc8c5; /* mayaz/50 */
+	--borderColor-buttonSecondary: #a69f98; /* mayaz */
+	--color-buttonSecondary: #ffffff;
+	--color-buttonSecondary-hover: #ffffff;
+	--color-buttonSecondary-active: #ffffff;
+	--bgColor-buttonSecondary-hover: #958a79;
+	--bgColor-buttonSecondary-active: #958a79;
+	--shadow-buttonSecondary-hover: none;
+	--shadow-buttonSecondary-active: none;
+
+	--shadow-default: none;
+
+	--color-buttonDanger: #ffffff;
+	--bgColor-buttonDanger: #ccc8c5; /* mayazLight */
+	--color-buttonDanger-hover: #ffffff;
+	--bgColor-buttonDanger-hover: #958a79; /* mayazDark */
+	--shadow-buttonDanger-hover: none;
+	--shadow-buttonDanger-active: none;
+
+	--color-badge: #ffffff; /* mayaz */
+	--color-badge-active: #ffffff; /* mayazDarker */
+	--color-badge-disabled: #000000; /* mayazLight */
+	--borderColor-badge: transparent; /* mayaz */
+	--borderColor-badge-active: transparent; /* mayazDarker */
+	--borderColor-badge-disabled: transparent; /* mayazLight */
+	--bgColor-badge: #a69f98; /* mayaz */
+	--bgColor-badge-active: #776e61; /* mayazDarker */
+	--bgColor-badge-disabled: #ccc8c5; /* mayazLight */
 }
 
 .snipcart-overwrite #snipcart-main-container span.snipcart-unit-price,
@@ -277,18 +310,19 @@ body {
 /** Cart Summary */
 .snipcart__font--secondary.snipcart-cart__secondary-header-title {
 	font-family: Roboto, sans-serif;
-	font-weight: 400;
+	font-weight: 350;
 	font-size: 1.1rem;
 }
 /** Product Title */
 .snipcart-item-line__title {
 	font-family: Roboto, sans-serif;
-	font-weight: 300;
+	font-weight: 350;
 	font-size: 1rem;
 }
 /** Product Image */
 .snipcart-item-line__header {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: flex-center;
 	justify-content: space-between;
 	gap: 0.25rem;
@@ -298,13 +332,97 @@ body {
 	@apply w-[92px] h-auto;
 }
 .snipcart-item-line--cart-edit .snipcart-item-line__image {
-	@apply max-w-full max-h-full;
-	width: auto;
+	@apply max-w-full max-h-full w-auto;
 }
 
-.snipcart-layout.snipcart-modal {
-	@apply border-2 border-mayazBorder;
+.snipcart-item-line__container {
+	@apply !border-2 !border-mayazBorder;
 }
-.snipcart-layout__content.snipcart-layout__content--side.snipcart-cart--edit {
-	@apply border-2 border-mayazBorder;
+.snipcart-layout__content {
+	@apply !border-l !border-mayazBorder;
+}
+/** Cart Footer */
+/*.snipcart-cart__footer {
+	@apply !bg-[#A69F98]/50 !border-t !border-mayazBorder;
+}*/
+.snipcart-summary-fees__notice.snipcart__font--regular {
+	font-family: Roboto, sans-serif;
+	font-weight: 300;
+	font-size: 0.876rem;
+	line-height: 1.15rem;
+}
+
+/** Cart Label */
+.snipcart-form__label,
+.snipcart-item-quantity__label {
+	font-family: Roboto, sans-serif;
+	font-weight: 400;
+	font-size: 0.768rem;
+	line-height: 1.15rem;
+}
+/** Cart Input */
+.snipcart-input__input {
+	font-family: Roboto, sans-serif;
+	font-weight: 400;
+	font-size: 0.876rem;
+	line-height: 1.15rem;
+}
+/** Cart Button */
+.snipcart-button-primary {
+	font-family: Roboto, sans-serif;
+	font-weight: 400;
+	border-radius: 0rem;
+}
+.snipcart-base-button__label {
+	font-family: Roboto, sans-serif;
+	font-weight: 400;
+	font-size: 0.876rem;
+	text-transform: uppercase;
+}
+/** Cart Detail Link */
+.snipcart-button-link {
+	font-family: Roboto, sans-serif;
+	font-weight: 400;
+	font-size: 0.876rem;
+}
+/** Cart Promo Code */
+.snipcart-input__input {
+	font-family: Roboto, sans-serif;
+	font-weight: 400;
+}
+.snipcart-input__input::placeholder {
+	font-family: Roboto, sans-serif;
+	font-weight: 400;
+	color: #958a79;
+}
+/** Cart "Secured by Snipcart" */
+.snipcart__font--secondary.snipcart__font--bold.snipcart-featured-payment-methods__title {
+	@apply !hidden;
+}
+/** Cart Header Icon */
+.snipcart-cart-header__icon.snipcart__icon,
+.snipcart-modal__close-icon.snipcart__icon {
+	@apply !text-mayazDark;
+}
+/** Auto Complete */
+.snipcart-input--readonly {
+	@apply !text-mayazDark !bg-mayaz/10;
+}
+/** Cart Checkbox */
+.snipcart-checkbox:checked + label:before,
+.snipcart-form__label.snipcart-form-radio__label::after {
+	border-color: none !important;
+	outline: none !important;
+	ring: none !important;
+
+	//background-color: #958a79;
+}
+.snipcart__icon {
+	@apply !text-black;
+}
+.snipcart-base-button__icon .snipcart__icon {
+	@apply !hidden;
+}
+.snipcart-form-radio + label:before {
+	@apply !border !border-mayazDark;
 }

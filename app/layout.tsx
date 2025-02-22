@@ -9,6 +9,7 @@ import BreakPoints from '@/components/layout/BreakPoints';
 import Header from '@/components/layout/Header';
 //import Modal from '@/components/ui/Modal';
 import { getLandingPage } from '@/lib/api';
+import SnipcartCustom from '@/components/ui/SnipcartCustom';
 //import { Fragment } from 'react';
 
 export const metadata: Metadata = {
@@ -30,11 +31,11 @@ export default async function RootLayout({
 				/>
 			</head>
 			<body className="flex flex-col h-full min-h-screen w-full justify-start">
-				<BreakPoints />
+				{/*<BreakPoints />*/}
 				<TickerBar ticker={landingPage.siteTicker} />
 				<Header />
 				<div className="px-2">
-					{children}
+					<SnipcartCustom>{children}</SnipcartCustom>
 					<Footer />
 				</div>
 				{/*
