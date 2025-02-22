@@ -22,6 +22,10 @@ export default function Home({ childParent }: Props) {
 	const [posts, setPosts] = useState<any[]>([]);
 	// eslint-disable-next-line  @typescript-eslint/no-explicit-any
 	const [filteredPosts, setFilteredPosts] = useState<any[]>([]);
+	const formatter = new Intl.NumberFormat('en-US', {
+		style: 'currency',
+		currency: 'USD',
+	});
 
 	useEffect(() => {
 		const fetchPosts = async () => {
@@ -69,7 +73,7 @@ export default function Home({ childParent }: Props) {
 	return (
 		<>
 			<ul className="fixed h-full top-0 right-0 bottom-0 w-full max-w-md z-20 overflow-y-scroll transition-fix bg-search">
-				<li className="sticky top-0 flex justify-center items-center w-full h-[86px] text-right py-4 px-6 transition-fix border-b border-mayazBorder/30 z-50">
+				<li className="sticky top-0 flex justify-center items-center w-full h-[86px] text-right py-4 px-6 transition-fix bg-mayazBody border-b border-mayazBorder/50 z-50">
 					<button
 						type="button"
 						className="flex flex-nowrap items-center justify-center bg-transparent pr-2"
@@ -81,7 +85,7 @@ export default function Home({ childParent }: Props) {
 						type="text"
 						value={searchTerm}
 						onChange={handleSearch}
-						className="grow px-2 pt-2.5 pb-2 text-base md:text-lg text-foreground placeholder:text-colorAlt border-none bg-transparent focus:outline-none focus:!border-transparent"
+						className="grow px-2 pt-2.5 pb-2 text-base md:text-lg text-foreground placeholder:text-mayaz border-none bg-transparent focus:outline-none focus:!border-transparent"
 						placeholder="Search products..."
 					/>
 					<button
@@ -128,25 +132,25 @@ export default function Home({ childParent }: Props) {
 												post?.slug?.current ?? ''
 											}`}
 										>
-											<div className="group flex flex-row flex-nowrap justify-start items-center gap-2 hover:bg-colorAlt/20 px-4 py-2 transition-all duration-500 ease-in-out">
-												<div className="overflow-hidden h-[90px] w-[100px] product-background border border-background/50 p-2">
+											<div className="group flex flex-row flex-nowrap justify-start items-center gap-2 hover:bg-mayaz/10 px-4 transition-all duration-500 ease-in-out">
+												<div className="overflow-hidden h-[120px] w-auto">
 													<Image
 														src={urlFor(post.thumbnail).url()}
 														alt={post.thumbnail.alt || 'Product Image'}
 														width={406}
 														height={578}
-														className="object-contain h-full w-full group-hover:scale-110 transition-all duration-500 ease-in-out"
+														className="object-contain h-full w-full transition-all duration-500 ease-in-out"
 													/>
 												</div>
 												<div className="relative text-foreground text-left p-2 w-[250px]">
 													<div>
-														<h2 className="text-sm text-left w-full pb-1">
+														<h2 className="text-sm text-left text-mayazDarker group-hover:text-black w-full pb-1">
 															{post.displayName || post.productName}
 														</h2>
 													</div>
 													<div>
-														<p className="text-xs md:text-xs group-hover:text-base text-colorAlt group-hover:text-[hsl(244, 48%, 72%)] transition-all duration-500 ease-in-out">
-															${post.productPricing.price}.00
+														<p className="text-xs text-mayazDark group-hover:text-black transition-all duration-500 ease-in-out">
+															{formatter.format(post.productPricing.price)}
 														</p>
 													</div>
 												</div>
