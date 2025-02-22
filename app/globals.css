@@ -426,3 +426,16 @@ body {
 .snipcart-form-radio + label:before {
 	@apply !border !border-mayazDark;
 }
+/** Cart Empty */
+.snipcart-empty-cart__title {
+	font-family: Roboto, sans-serif;
+	font-weight: 400;
+	font-size: 1.2rem;
+	color: #958a79;
+}
+.snipcart-button-secondary {
+	border-radius: 0rem;
+}
+.snipcart-base-button__wrapper .snipcart-base-button__icon {
+	@apply !hidden;
+}
