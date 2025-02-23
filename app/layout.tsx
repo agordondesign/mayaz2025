@@ -20,15 +20,15 @@ export const metadata: Metadata = {
 		icon: [
 			{
 				media: '(prefers-color-scheme: light)',
-				url: '/favicon.png',
-				href: '/favicon.png',
+				url: '/favicon-ko.png',
+				href: '/favicon-ko.png',
 				type: 'image/png',
 				rel: 'icon',
 			},
 			{
 				media: '(prefers-color-scheme: dark)',
-				url: '/favicon-ko.png',
-				href: '/favicon-ko.png',
+				url: '/favicon.png',
+				href: '/favicon.png',
 				type: 'image/png',
 				rel: 'icon',
 			},
