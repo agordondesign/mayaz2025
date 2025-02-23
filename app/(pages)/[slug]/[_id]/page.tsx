@@ -27,7 +27,8 @@ export async function generateStaticParams() {
 	}));
 }
 
-export default async function page({ params: { _id } }: HerVirtueProductProp) {
+export default async function page({ params }: HerVirtueProductProp) {
+	const { _id } = params;
 	const product = await getProductBySlug(_id);
 	return (
 		<div>
