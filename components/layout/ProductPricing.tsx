@@ -18,6 +18,8 @@ type ProductPricingProps = {
 	selectedSize: string;
 };
 
+export const revalidate = 10; // revalidate at most every hour
+
 export default function ProductPricing({
 	product,
 	selectedSize,

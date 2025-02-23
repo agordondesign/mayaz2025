@@ -9,6 +9,8 @@ type HerVirtueProductProp = {
 	}>;
 };
 
+export const revalidate = 10; // revalidate at most every hour
+
 export default async function page({ params }: HerVirtueProductProp) {
 	const { _id } = await params;
 	const product = await getProductBySlug(_id);
