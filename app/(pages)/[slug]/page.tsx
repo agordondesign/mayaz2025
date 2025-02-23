@@ -12,9 +12,9 @@ import PageTitle from '@/components/ui/PageTitle';
 import HerStory from '@/components/layout/HerStory';
 
 type PageProps = {
-	params: {
+	params: Promise<{
 		slug: string;
-	};
+	}>;
 };
 
 export const revalidate = 10; // Revalidate every hour
@@ -29,7 +29,7 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: PageProps) {
-	const { slug } = params; // ✅ Fixed incorrect await usage
+	const { slug } = await params; // ✅ Fixed incorrect await usage
 	const pages = await getPageBySlug(slug);
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	const currentPage = pages?.find((page: any) => page.slug.current === slug);
