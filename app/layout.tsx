@@ -31,7 +31,7 @@ export default async function RootLayout({
 				/>
 			</head>
 			<body className="flex flex-col h-full min-h-screen w-full justify-start">
-				{/*<BreakPoints />*/}
+				{/*<BreakPoints /> responsive testing*/}
 				<TickerBar ticker={landingPage.siteTicker} />
 				<Header />
 				<div className="px-2">
