@@ -20,10 +20,10 @@ type PageProps = {
 		current: string;
 	};*/
 
-	params: Promise<{
+	params: {
 		slug: string;
 		_id: string;
-	}>;
+	};
 	//searchParams: URLSearchParams;
 };
 
@@ -50,7 +50,7 @@ export async function generateStaticParams() {
 }
 
 export default async function page({ params }: PageProps) {
-	const { slug } = await params;
+	const { slug } = params;
 	const pages = await getPageBySlug(slug);
 	//const collections = await getProductsByCollection(slug);
 	const currentPage = await pages?.find(
