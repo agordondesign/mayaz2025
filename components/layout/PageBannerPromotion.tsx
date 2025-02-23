@@ -17,6 +17,7 @@ type PageBannerPromotionProps = {
 						url: string;
 						path: string;
 					};
+					colSpan: string;
 				};
 			}[];
 		}[];
@@ -35,6 +36,12 @@ export default function PageBannerPromotion({
 					? 'grid-cols-2 lg:grid-cols-2'
 					: page?.promoAd?.length === 3
 					? 'grid-cols-3 lg:grid-cols-3'
+					: page?.promoAd?.length === 4
+					? 'grid-cols-2 lg:grid-cols-2'
+					: page?.promoAd?.length === 5
+					? 'grid-cols-3 lg:grid-cols-3'
+					: page?.promoAd?.length === 6
+					? 'grid-cols-3 lg:grid-cols-3'
 					: ''
 			} gap-2`}
 		>
@@ -50,7 +57,12 @@ export default function PageBannerPromotion({
 							: `/${promo?.bannerLink?.slug?.current ?? ''}`
 					}
 				>
-					<div className="relative bg-mayaz md:bg-mayaz/20 h-[60px] md:h-[150px] lg:h-[200px] xl:h-[250px] transition-all ease-in-out duration-300">
+					<div
+						className="relative bg-mayaz md:bg-mayaz/20 h-[60px] md:h-[150px] lg:h-[200px] xl:h-[250px] transition-all ease-in-out duration-300"
+						style={{
+							gridColumn: promo.colSpan,
+						}}
+					>
 						<Image
 							src={urlFor(promo.banner).url()}
 							alt={promo.banner.alt}

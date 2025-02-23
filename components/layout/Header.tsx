@@ -375,6 +375,19 @@ export default function Header() {
 											</motion.li>
 											<motion.li variants={sidebarItemVariants} key="sale">
 												<Link
+													href="/her-story"
+													className="block px-16 py-4 hover:bg-mayaz/20"
+													onClick={menuToggle}
+												>
+													Her Story
+												</Link>
+											</motion.li>
+											<motion.li
+												variants={sidebarItemVariants}
+												key="sale"
+												className="hidden"
+											>
+												<Link
 													href="/sale"
 													className="block px-16 py-4 font-medium tracking-[0.75em] text-xl hover:bg-mayaz/20"
 													onClick={menuToggle}

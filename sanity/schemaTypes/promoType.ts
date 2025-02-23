@@ -28,6 +28,20 @@ export const promoType = defineType({
 			],
 		}),
 		defineField({
+			name: 'colSpan',
+			title: 'Column Span',
+			type: 'string',
+			options: {
+				layout: 'radio',
+				list: [
+					{ title: 'col-span-1', value: 'span 1 / span 1' },
+					{ title: 'col-span-2', value: 'span 2 / span 2' },
+					{ title: 'col-span-3', value: 'span 3 / span 3' },
+				],
+			},
+			initialValue: 'span 1 / span 1',
+		}),
+		defineField({
 			name: 'bannerSize',
 			title: 'Banner Size',
 			type: 'string',

@@ -80,7 +80,7 @@ export default function ProductList({
 	return (
 		<section>
 			{!hideFilter && (
-				<div className="border-y p-4 space-x-8 w-full mx-auto text-xs font-normal text-center text-black tracking-[0.15rem]">
+				<div className="border-y p-4 mb-6 space-x-8 w-full mx-auto text-xs font-normal text-center text-black tracking-[0.15rem]">
 					<button
 						type="button"
 						value=""
@@ -126,7 +126,7 @@ export default function ProductList({
 						: columns === 3
 						? 'lg:grid-cols-3'
 						: 'lg:grid-cols-4'
-				} !gap-2 gap-y-5 md:gap-y-6 lg:!gap-y-12 mx-auto pt-6 overflow-hidden`}
+				} !gap-2 gap-y-5 md:gap-y-6 lg:!gap-y-12 mx-auto overflow-hidden`}
 			>
 				{collection &&
 					filterProducts.map((product) => (
