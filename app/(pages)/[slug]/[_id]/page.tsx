@@ -9,6 +9,7 @@ type HerVirtueProductProp = {
 		slug: string;
 		_id: string;
 	};
+	searchParams: URLSearchParams;
 };
 
 export const revalidate = 10; // revalidate at most every hour
