@@ -9,6 +9,8 @@ import ProductByCollection from '@/components/layout/ProductByCollection';
 import PageTitle from '@/components/ui/PageTitle';
 import { getLandingPage } from '@/lib/api';
 
+export const revalidate = 10; // Revalidate every hour
+
 export default async function Home() {
 	const landingPage = await getLandingPage();
 	return (

@@ -373,7 +373,7 @@ export default function Header() {
 													<span className="text-base">Nail Polish</span>
 												</Link>
 											</motion.li>
-											<motion.li variants={sidebarItemVariants} key="sale">
+											<motion.li variants={sidebarItemVariants} key="her-story">
 												<Link
 													href="/her-story"
 													className="block px-16 py-4 hover:bg-mayaz/20"
