@@ -37,7 +37,7 @@ export default function NewRelease({ arrival }: NewReleaseProps) {
 							/>
 						</div>
 						<div className="absolute flex flex-col gap-6 w-auto h-auto">
-							<span className="flex justify-center items-center w-full h-full text-3xl tracking-[0.25rem] text-white font-essenceAltFont">
+							<span className="flex justify-center items-center text-center w-full h-full text-3xl tracking-[0.25rem] text-white font-essenceAltFont">
 								{newestArrival.displayName
 									? newestArrival.displayName
 									: newestArrival.productName}
@@ -72,7 +72,7 @@ export default function NewRelease({ arrival }: NewReleaseProps) {
 							/>
 						</div>
 						<div className="absolute flex flex-col gap-6 w-auto h-auto">
-							<span className="flex justify-center items-center w-full h-full text-3xl tracking-[0.25rem] text-white font-essenceAltFont">
+							<span className="flex justify-center items-center text-center w-full h-full text-3xl tracking-[0.25rem] text-white font-essenceAltFont">
 								{newArrival.displayName
 									? newArrival.displayName
 									: newArrival.productName}
