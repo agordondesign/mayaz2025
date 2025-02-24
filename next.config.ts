@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
 	async redirects() {
 		return [
 			{
-				source: '/Maÿaz_Collection.vcf',
+				source: '/Ma%C3%BFaz_Collection.vcf',
 				destination: '/',
 				permanent: true,
 			},
