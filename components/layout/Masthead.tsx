@@ -2,6 +2,7 @@
 import { urlFor } from '@/sanity/lib/image';
 import Image from 'next/image';
 import PageBannerPromotion from './PageBannerPromotion';
+import Link from 'next/link';
 
 type MastheadProps = {
 	landingPage: {
@@ -61,13 +62,13 @@ export default function Masthead({ landingPage }: MastheadProps) {
 								Sunnah.
 							</p>
 							<div>
-								<button
-									type="button"
+								<Link
+									href="/showroom"
 									className="bg-black border border-mayaz/50 text-sm text-background tracking-[0.25rem] uppercase py-4 px-8"
 								>
 									<span className="hidden lg:inline-block">Shop&nbsp;</span>
 									Luxury Collection
-								</button>
+								</Link>
 							</div>
 						</div>
 					</div>

@@ -17,7 +17,7 @@ export default async function Home() {
 		<div className="flex flex-col gap-2 w-full pt-2 max-w-[96rem] mx-auto">
 			<Masthead landingPage={landingPage} />
 			<main className="flex flex-col w-full max-w-[96rem] mx-auto">
-				<div className="flex flex-col gap-4 w-full mt-4 text-sm">
+				<div className="flex flex-col md:gap-4 w-full mt-4 text-sm">
 					{/* biome-ignore lint/suspicious/noExplicitAny: <explanation> */}
 					{landingPage?.sectionModule?.map((section: any) => (
 						<div key={section?._id} className="flex w-full gap-4">
