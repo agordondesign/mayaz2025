@@ -14,6 +14,7 @@ import ProductTitleDetail from './ProductTitleDetail';
 import ProductPricing from './ProductPricing';
 //import { Book } from 'lucide-react';
 import BookAuthor from './BookAuthor';
+import InventoryList from './InventoryList';
 
 type ProductDetailProps = {
 	product: {
@@ -143,7 +144,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 	);*/
 	//const noSize = product?.collection?.slug === 'mersi-nail-polish';
 
-	const firstAvailableSize = product.variantSizes?.find(
+	const firstAvailableSize = product?.variantSizes?.find(
 		(variantSize: {
 			available: boolean;
 			sizeLabel?: string;
@@ -166,7 +167,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 		currency: 'USD',
 	});*/
 	const increasePrice =
-		product.variantSizes?.find((size) => size.size.size === selectedSize)
+		product?.variantSizes?.find((size) => size.size.size === selectedSize)
 			?.variablePrice || 0;
 	const productPrice = product?.productPricing.price;
 	const markdownPrice = product?.productPricing.markdownPrice;
@@ -192,6 +193,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 				{/**PRODUCT DESCRIPTION */}
 				<div className="relative w-full md:w-1/2 xl:w-1/3 p-0 md:pl-6 lg:pr-0 text-sm flex flex-col">
 					<div className="flex flex-col gap-6 md:gap-8 w-full sticky top-[130px] px-4 md:pl-0 md:pr-4">
+						<InventoryList />
 						<div className="space-y-3">
 							{/*<SnipCartInventory productId={product} />*/}
 							<ProductTitleDetail product={product} />

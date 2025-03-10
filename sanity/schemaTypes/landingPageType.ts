@@ -110,6 +110,12 @@ export const landingPageType = defineType({
 					type: 'reference',
 					to: [{ type: 'newArrival' }],
 				}),
+				defineField({
+					name: 'newestArrival',
+					title: 'Newest Arrival',
+					type: 'reference',
+					to: [{ type: 'singleFeatureBanner' }],
+				}),
 			],
 		}),
 		defineField({

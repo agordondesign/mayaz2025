@@ -135,6 +135,24 @@ export const productType = defineType({
 						},
 					],
 				}),
+				defineField({
+					name: 'featuredThumbnailMobile',
+					title: 'Featured Thumbnail (mobile)',
+					description: 'Featured Product thumbnail image for mobile',
+					type: 'image',
+					hidden: ({ parent }) => !parent?.featured,
+					options: {
+						hotspot: true,
+					},
+					fields: [
+						{
+							name: 'alt',
+							title: 'Alternative text',
+							description: 'Important for SEO and accessiblity',
+							type: 'string',
+						},
+					],
+				}),
 			],
 		}),
 		defineField({

@@ -6,6 +6,7 @@ import PageBanner from '@/components/layout/PageBanner';
 import PageBannerPromotion from '@/components/layout/PageBannerPromotion';
 import PageContent from '@/components/layout/PageContent';
 import ProductByCollection from '@/components/layout/ProductByCollection';
+import SingleFeatureBanner from '@/components/layout/SingleFeatureBanner';
 import PageTitle from '@/components/ui/PageTitle';
 import { getLandingPage } from '@/lib/api';
 
@@ -46,6 +47,9 @@ export default async function Home() {
 								<div>
 									<ProductByCollection section={section} />
 								</div>
+							)}
+							{section?._type === 'singleFeatureBanner' && (
+								<SingleFeatureBanner arrival={section} />
 							)}
 							{section?._type === 'newArrival' && (
 								<NewRelease arrival={section} />

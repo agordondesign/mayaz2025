@@ -118,6 +118,17 @@ export async function getLandingPage() {
         	}
 				},
 			},
+			_type == "singleFeatureBanner" => {
+				...,
+				newestArrival{
+        	...,
+        	newestArrival->{
+        	  ...,
+        	  product->,
+  			  	collection->
+        	}
+				},
+			},
 		},
 		_type == "featureBanner" => {
       ...,
