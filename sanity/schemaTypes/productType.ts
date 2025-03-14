@@ -225,6 +225,13 @@ export const productType = defineType({
 			initialValue: false,
 		}),
 		defineField({
+			name: 'niche',
+			title: 'Niche',
+			group: 'productDetails',
+			type: 'boolean',
+			initialValue: false,
+		}),
+		defineField({
 			name: 'author',
 			title: 'Author',
 			type: 'array',
@@ -238,7 +245,7 @@ export const productType = defineType({
 			group: 'productDetails',
 			type: 'reference',
 			to: [{ type: 'fabrics' }],
-			hidden: ({ document }) => !!document?.book,
+			hidden: ({ document }) => !!document?.book || !!document?.niche,
 		}),
 		defineField({
 			name: 'location',
@@ -247,7 +254,7 @@ export const productType = defineType({
 			group: 'productDetails',
 			type: 'reference',
 			to: [{ type: 'madeIn' }],
-			hidden: ({ document }) => !!document?.book,
+			hidden: ({ document }) => !!document?.book || !!document?.niche,
 		}),
 		defineField({
 			name: 'productDescription',
@@ -258,7 +265,7 @@ export const productType = defineType({
 		}),
 		defineField({
 			name: 'productDetails',
-			title: 'Product Details',
+			title: 'Product Details / Ingredients',
 			group: 'productDetails',
 			type: 'blockContent',
 			initialValue: [],
@@ -321,6 +328,7 @@ export const productType = defineType({
 			group: 'productVariants',
 			type: 'reference',
 			to: [{ type: 'swatch' }],
+			hidden: ({ document }) => !!document?.book || !!document?.niche,
 		}),
 		defineField({
 			name: 'variantSizes',

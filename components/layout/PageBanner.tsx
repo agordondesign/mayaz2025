@@ -48,6 +48,7 @@ export default function PageBanner({ collection }: PageBannerProps) {
 	const pathname = usePathname();
 	const mersi = pathname.includes('mersi');
 	const herStory = pathname.includes('her-story');
+	const niche = pathname.includes('niche');
 	return (
 		<div className="flex flex-col w-full gap-2">
 			<section
@@ -57,7 +58,7 @@ export default function PageBanner({ collection }: PageBannerProps) {
 						collection?.bannerColor?.value && collection?.bannerColor.value,
 				}}
 			>
-				{!collection?.bannerColumns ? (
+				{!collection?.bannerColumns && !niche ? (
 					<div className="flex flex-col lg:gap-4 justify-center items-center lg:justify-start lg:items-end w-full xl:h-[370px]">
 						{!mersi ? (
 							<div className="relative lg:absolute left-0 flex flex-col justify-center items-center lg:items-start space-y-2 z-10 w-full lg:w-3/7 h-full py-6 pl-10 pr-6 !bg-mayazBody lg:!bg-transparent">
@@ -112,6 +113,39 @@ export default function PageBanner({ collection }: PageBannerProps) {
 								}}
 							/>
 						)}
+					</div>
+				) : !collection?.bannerColumns && niche ? (
+					<div className="flex justify-center items-start w-full h-full">
+						<Link href="/her-story" passHref>
+							<div className="absolute right-0 flex justify-center md:justify-end items-center z-10 w-full h-full md:pr-6 lg:pr-20 bg-transparent">
+								<div className="relative lg:absolute left-0 flex flex-col justify-center items-center lg:items-start space-y-2 z-10 w-full lg:w-3/7 h-full py-6 pl-10 pr-6 !bg-mayazBody lg:!bg-transparent">
+									<Image
+										src="/svg/Niche.svg"
+										alt="Niche"
+										width={891}
+										height={313}
+										style={{
+											objectFit: 'contain',
+										}}
+										className="w-auto h-full max-h-[72px] lg:max-h-[100px]"
+									/>{' '}
+									<span className="tracking-[0.15em] text-sm lg:text-base">
+										{collection?.bannerTitle}
+									</span>
+								</div>
+							</div>
+							<div className="w-full h-full max-h-[441px] sm:max-h-[681px] md:max-h-[425px] lg:max-h-[575px] xl:max-h-[699px] overflow-hidden">
+								{collection?.banner && (
+									<Image
+										src={urlFor(collection?.banner).url()}
+										alt={collection?.banner?.alt}
+										width={2000}
+										height={700}
+										className="object-cover object-left-top w-full h-auto lg:w-auto lg:h-full aspect-square md:aspect-auto"
+									/>
+								)}
+							</div>
+						</Link>
 					</div>
 				) : (
 					<div className="flex justify-center items-start w-full h-full">

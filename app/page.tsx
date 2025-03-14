@@ -3,7 +3,8 @@ import FeatureBanner from '@/components/layout/FeatureBanner';
 import Masthead from '@/components/layout/Masthead';
 import NewRelease from '@/components/layout/NewRelease';
 import PageBanner from '@/components/layout/PageBanner';
-import PageBannerPromotion from '@/components/layout/PageBannerPromotion';
+import HomeBannerPromotion from '@/components/layout/HomeBannerPromotion';
+//import PageBannerPromotion from '@/components/layout/PageBannerPromotion';
 import PageContent from '@/components/layout/PageContent';
 import ProductByCollection from '@/components/layout/ProductByCollection';
 import SingleFeatureBanner from '@/components/layout/SingleFeatureBanner';
@@ -40,7 +41,7 @@ export default async function Home() {
 							)}
 							{section?._type === 'bannerAd' && (
 								<section className="flex flex-col gap-2 w-full">
-									<PageBannerPromotion page={section} />
+									<HomeBannerPromotion page={section} />
 								</section>
 							)}
 							{section?._type === 'productCollectionList' && (

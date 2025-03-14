@@ -11,11 +11,13 @@ import { PortableText } from 'next-sanity';
 type AccordionComponentProps = {
 	description: TypedObject | TypedObject[];
 	details: TypedObject | TypedObject[];
+	niche?: boolean;
 };
 
 export function AccordionComponent({
 	description,
 	details,
+	niche,
 }: AccordionComponentProps) {
 	return (
 		<Accordion
@@ -39,7 +41,9 @@ export function AccordionComponent({
 			)}
 			{Array.isArray(details) && details.length !== 0 && (
 				<AccordionItem value="item-2">
-					<AccordionTrigger>Details</AccordionTrigger>
+					<AccordionTrigger>
+						{niche !== true ? 'Details' : 'Ingredients'}
+					</AccordionTrigger>
 					<AccordionContent>
 						<div className="marker:text-black prose prose-sm prose-black prose-strong:font-normal prose-strong:text-black prose-ul:py-0 prose-ul:text-black prose-li:my-0 prose-li:leading-snug prose-li:text-mayazDark prose-li:list-[square]">
 							<PortableText value={details} components={RichTextComponents} />

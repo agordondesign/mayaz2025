@@ -1,3 +1,4 @@
+//'use client';
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { urlFor } from '@/sanity/lib/image';
 import Image from 'next/image';

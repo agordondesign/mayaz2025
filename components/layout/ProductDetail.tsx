@@ -14,11 +14,12 @@ import ProductTitleDetail from './ProductTitleDetail';
 import ProductPricing from './ProductPricing';
 //import { Book } from 'lucide-react';
 import BookAuthor from './BookAuthor';
-import InventoryList from './InventoryList';
+//import InventoryList from './InventoryList';
 
 type ProductDetailProps = {
 	product: {
 		book: boolean;
+		niche: boolean;
 		_id: string;
 		productDetails: TypedObject | TypedObject[];
 		displayName: string;
@@ -193,7 +194,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 				{/**PRODUCT DESCRIPTION */}
 				<div className="relative w-full md:w-1/2 xl:w-1/3 p-0 md:pl-6 lg:pr-0 text-sm flex flex-col">
 					<div className="flex flex-col gap-6 md:gap-8 w-full sticky top-[130px] px-4 md:pl-0 md:pr-4">
-						<InventoryList />
+						{/*<InventoryList />*/}
 						<div className="space-y-3">
 							{/*<SnipCartInventory productId={product} />*/}
 							<ProductTitleDetail product={product} />
@@ -204,14 +205,23 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 						</div>
 						{!product.book ? (
 							<>
-								<VariantColor
-									product={product}
-									soldout={product.productStatus.soldOut}
-								/>
-								<VariantSize
-									product={[product]}
-									onDataChange={handleSelectedSize}
-								/>
+								{!product.niche ? (
+									<>
+										<VariantColor
+											product={product}
+											soldout={product.productStatus.soldOut}
+										/>
+										<VariantSize
+											product={[product]}
+											onDataChange={handleSelectedSize}
+										/>
+									</>
+								) : (
+									<VariantSize
+										product={[product]}
+										onDataChange={handleSelectedSize}
+									/>
+								)}
 							</>
 						) : (
 							<BookAuthor product={product} />
@@ -220,6 +230,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 							product={{
 								_id: product._id,
 								book: product.book,
+								niche: product.niche,
 								productStatus: product.productStatus,
 								price: totalPrice,
 								briefDescription: product.briefDescription,
@@ -234,11 +245,13 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 											.join('|')
 									: undefined,
 								currentSize: selectedSize || '',
+								author: product.author,
 							}}
 						/>
 						<AccordionComponent
 							description={productDescription}
 							details={productDetails}
+							niche={product.niche}
 						/>
 					</div>
 				</div>
