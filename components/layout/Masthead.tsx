@@ -1,13 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { urlFor } from '@/sanity/lib/image';
 import Image from 'next/image';
-import PageBannerPromotion from './PageBannerPromotion';
+//import PageBannerPromotion from './PageBannerPromotion';
 import Link from 'next/link';
+import HomeBannerPromotion from './HomeBannerPromotion';
 
 type MastheadProps = {
 	landingPage: {
 		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		bannerAd: any;
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+		bannerAds: any;
 		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		promoAd: any;
 		masthead: {
@@ -15,8 +18,36 @@ type MastheadProps = {
 			asset: {
 				alt: string;
 				url: string;
+				sectionModule: {
+					promoAd: {
+						banner?: {
+							alt: string;
+							asset: {
+								alt: string;
+								url: string;
+								path: string;
+							};
+							colSpan: string;
+						};
+					}[];
+				}[];
 			};
 		};
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+		promoAds: any;
+		sectionModule: {
+			promoAd: {
+				banner?: {
+					alt: string;
+					asset: {
+						alt: string;
+						url: string;
+						path: string;
+					};
+					colSpan: string;
+				};
+			}[];
+		}[];
 	};
 };
 
@@ -76,7 +107,7 @@ export default function Masthead({ landingPage }: MastheadProps) {
 			</div>
 			<section>
 				{landingPage?.bannerAd && (
-					<PageBannerPromotion page={landingPage?.bannerAd} />
+					<HomeBannerPromotion page={landingPage?.bannerAd} />
 				)}
 			</section>
 		</div>

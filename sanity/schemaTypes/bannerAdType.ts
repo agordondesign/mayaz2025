@@ -18,6 +18,12 @@ export const bannerAdType = defineType({
 			type: 'number',
 		}),
 		defineField({
+			name: 'promoAds',
+			title: 'Promo Ad Carousel',
+			type: 'array',
+			of: [{ type: 'reference', to: [{ type: 'promo' }] }],
+		}),
+		defineField({
 			name: 'promoAd',
 			title: 'Promo Ad',
 			type: 'array',

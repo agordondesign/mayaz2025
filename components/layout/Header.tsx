@@ -351,6 +351,7 @@ export default function Header() {
 													Books
 												</Link>
 											</motion.li>
+
 											<motion.li
 												variants={sidebarItemVariants}
 												key="mersi-nail-polish"
@@ -395,17 +396,23 @@ export default function Header() {
 													SALE
 												</Link>
 											</motion.li>
-											<motion.li
-												variants={sidebarItemVariants}
-												key="her-locs"
-												className="hidden"
-											>
+											<motion.li variants={sidebarItemVariants} key="niche">
 												<Link
-													href="/her-bookshelf"
-													className="block px-16 py-4 hover:bg-mayaz/20"
+													href="/niche"
+													className="flex gap-2 justify-start items-baseline pl-16 py-4 hover:bg-mayaz/20"
 													onClick={menuToggle}
 												>
-													Suite Locs
+													<Image
+														src="/svg/Niche.svg"
+														alt="Mersi Nail Polish"
+														width={891}
+														height={313}
+														style={{
+															objectFit: 'contain',
+														}}
+														className="w-auto h-10"
+													/>{' '}
+													<span className="text-base">Hair Care</span>
 												</Link>
 											</motion.li>
 											<motion.li

@@ -27,6 +27,14 @@ type PageBannerProps = {
 				path: string;
 			};
 		};
+		bannerMobile?: {
+			alt: string;
+			asset: {
+				alt: string;
+				url: string;
+				path: string;
+			};
+		};
 		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		promoAd: any;
 		sectionModule: {
@@ -116,9 +124,9 @@ export default function PageBanner({ collection }: PageBannerProps) {
 					</div>
 				) : !collection?.bannerColumns && niche ? (
 					<div className="flex justify-center items-start w-full h-full">
-						<Link href="/her-story" passHref>
-							<div className="absolute right-0 flex justify-center md:justify-end items-center z-10 w-full h-full md:pr-6 lg:pr-20 bg-transparent">
-								<div className="relative lg:absolute left-0 flex flex-col justify-center items-center lg:items-start space-y-2 z-10 w-full lg:w-3/7 h-full py-6 pl-10 pr-6 !bg-mayazBody lg:!bg-transparent">
+						<div className="relative">
+							<div className="md:absolute right-0 flex justify-center md:justify-end items-center z-10 w-full h-full md:pr-6 lg:pr-20 bg-transparent">
+								<div className="relative left-0 flex flex-col justify-center items-center md:items-start space-y-2 z-10 w-full md:w-3/7 h-full py-6 pl-10 pr-6 !bg-mayazBody md:!bg-transparent">
 									<Image
 										src="/svg/Niche.svg"
 										alt="Niche"
@@ -127,25 +135,38 @@ export default function PageBanner({ collection }: PageBannerProps) {
 										style={{
 											objectFit: 'contain',
 										}}
-										className="w-auto h-full max-h-[72px] lg:max-h-[100px]"
+										className="w-auto h-full max-h-[62px] md:max-h-[72px] lg:max-h-[100px]"
 									/>{' '}
 									<span className="tracking-[0.15em] text-sm lg:text-base">
 										{collection?.bannerTitle}
 									</span>
 								</div>
 							</div>
-							<div className="w-full h-full max-h-[441px] sm:max-h-[681px] md:max-h-[425px] lg:max-h-[575px] xl:max-h-[699px] overflow-hidden">
+							<div className="w-full h-[250px] md:h-full md:max-h-[425px] lg:max-h-[575px] xl:max-h-[699px] overflow-hidden">
 								{collection?.banner && (
-									<Image
-										src={urlFor(collection?.banner).url()}
-										alt={collection?.banner?.alt}
-										width={2000}
-										height={700}
-										className="object-cover object-left-top w-full h-auto lg:w-auto lg:h-full aspect-square md:aspect-auto"
-									/>
+									<>
+										<Image
+											src={urlFor(collection?.banner).url()}
+											alt={collection?.banner?.alt}
+											width={2000}
+											height={700}
+											className={`${
+												collection?.bannerMobile ? 'hidden md:block' : 'block'
+											} relative object-cover object-center md:object-left-top w-full h-auto md:w-auto md:h-full aspect-square md:aspect-auto`}
+										/>
+										{collection?.bannerMobile && (
+											<Image
+												src={urlFor(collection?.bannerMobile).url()}
+												alt={collection?.banner?.alt}
+												width={2000}
+												height={700}
+												className="md:hidden relative object-cover object-center right-0 z-0 w-auto h-full"
+											/>
+										)}
+									</>
 								)}
 							</div>
-						</Link>
+						</div>
 					</div>
 				) : (
 					<div className="flex justify-center items-start w-full h-full">

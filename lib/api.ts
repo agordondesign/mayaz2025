@@ -50,14 +50,22 @@ export async function getLandingPage() {
 			},
 		},
 		bannerAd->{
-		  ...,
-		  promoAd[]->{...,
+  		...,
+  		promoAds[]->{
+      	...,
+    		bannerLink-> {
+    			...,
+  				collection->
+				}
+			},
+  		promoAd[]->{
+				...,
 				bannerLink-> {
-		      ...,
-		      collection->
-		    }
-			}
-		},
+    			...,
+					collection->
+				}
+  		}
+  	},
 		sectionModule[]->{
 		  ...,
 		  _type == "productCollectionList" => {
@@ -91,7 +99,12 @@ export async function getLandingPage() {
 		    }
 			},
 			_type == "bannerAd" => {
-				...,
+      promoAds[]->{...,
+					bannerLink-> {
+		        ...,
+		        collection->
+		      }
+				},
 				promoAd[]->{...,
 					bannerLink-> {
 		        ...,

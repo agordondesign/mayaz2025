@@ -33,6 +33,21 @@ export const bannerType = defineType({
 			],
 		}),
 		defineField({
+			name: 'bannerMobile',
+			title: 'Banner Mobile',
+			type: 'image',
+			options: {
+				hotspot: true,
+			},
+			fields: [
+				{
+					name: 'alt',
+					title: 'Alternative text',
+					type: 'string',
+				},
+			],
+		}),
+		defineField({
 			name: 'bannerColor',
 			title: 'Banner Color',
 			type: 'simplerColor',
