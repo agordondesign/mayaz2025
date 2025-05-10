@@ -137,7 +137,11 @@ export default function Banner() {
 										<span className="relative">
 											<FaInstagram color="#79716D" size={18} />
 										</span>
-										<a href="https://www.instagram.com/mayaz">
+										<a
+											href="https://www.instagram.com/mayazcollection"
+											target="_blank"
+											rel="noreferrer"
+										>
 											<span className="block text-stone-500 hover:text-black font-[400] pl-1 pb-0.5">
 												@mayazcollection
 											</span>
