@@ -31,9 +31,10 @@ type Props = {
 		}[];
 	};
 	book?: boolean;
+	knockout?: boolean;
 };
 
-function SnipCartButton({ product }: Props) {
+function SnipCartButton({ product, knockout }: Props) {
 	return (
 		<div
 			className={`${
@@ -71,7 +72,9 @@ function SnipCartButton({ product }: Props) {
 					type="button"
 					className={`snipcart-add-item px-2 py-5 uppercase tracking-widest text-xs ${
 						!product.productStatus.soldOut
-							? 'bg-black text-white w-full hover:cursor-pointer focus:cursor-pointer hover:bg-mayazDark'
+							? `${
+									!knockout ? 'bg-black text-white' : 'bg-white text-black'
+							  } w-full hover:cursor-pointer focus:cursor-pointer hover:bg-mayazNiche`
 							: 'bg-transparent text-mayazDark border border-mayazBorder w-full'
 					} `}
 					data-item-id={product._id}

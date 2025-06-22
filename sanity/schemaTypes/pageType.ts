@@ -67,6 +67,11 @@ export const pageType = defineType({
 					type: 'reference',
 					to: [{ type: 'productCollectionList' }],
 				}),
+				defineArrayMember({
+					name: 'nicheBannerSection',
+					title: 'Niche Banner Section',
+					type: 'nicheBanner',
+				}),
 				/**
 				 * ##Not needed for now
 				defineArrayMember({

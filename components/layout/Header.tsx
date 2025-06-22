@@ -16,6 +16,7 @@ import { CircleUser, Search, ShoppingBag } from 'lucide-react';
 export default function Header() {
 	//const [selected, setSelected] = useState('');
 	const isStudio = usePathname().includes('/studio');
+	//const isNiche = usePathname().includes('niche-micro-loc-studio');
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [searchState, setSearchState] = useState(false);
 
@@ -56,6 +57,11 @@ export default function Header() {
 			{!isStudio && (
 				<>
 					<header className="sticky top-0 w-full px-0 font-base z-20 bg-mayazBody">
+						{/*<header
+						className={`sticky top-0 w-full px-0 font-base z-20 ${
+							isNiche ? 'bg-black text-white' : 'bg-mayazBody'
+						}`}
+					>*/}
 						<div className="flex w-full items-center justify-between">
 							<nav className="w-full max-w-[96rem] mx-auto py-2 pt-4 md:pt-6 pb-4 md:pb-6 z-20 top-0 left-0 transition-all duration-300 ease-in-out">
 								<div className="lg:max-w-[96rem] pl-4 flex flex-wrap items-center justify-between mx-auto">
@@ -403,16 +409,16 @@ export default function Header() {
 													onClick={menuToggle}
 												>
 													<Image
-														src="/svg/Niche.svg"
+														src="/svg/NICHE-MicroLocsLogoBLK.svg"
 														alt="Mersi Nail Polish"
 														width={891}
 														height={313}
 														style={{
 															objectFit: 'contain',
 														}}
-														className="w-auto h-10"
+														className="w-auto h-14"
 													/>{' '}
-													<span className="text-base">Hair Care</span>
+													<span className="text-base hidden">Hair Care</span>
 												</Link>
 											</motion.li>
 											<motion.li
@@ -423,7 +429,7 @@ export default function Header() {
 												//exit={{ y: '100%', opacity: 0 }}
 												//transition={{ delay: 0.5 }}
 												key="account"
-												className="absolute bottom-0 border-t border-mayazBorder/70 w-full hover:bg-mayaz/20"
+												className="sticky bottom-0 border-t mt-6 bg-mayazBody border-mayazBorder/70 w-full hover:bg-mayaz/20"
 											>
 												<button
 													type="button"

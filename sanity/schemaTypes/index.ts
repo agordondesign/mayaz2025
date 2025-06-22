@@ -33,6 +33,7 @@ import { newArrivalType } from './newArrivalType';
 import { pageTitleType } from './pageTitleType';
 import { modalContentType } from './modalContentType';
 import { singleFeatureBannerType } from './singleFeatureBannerType';
+import { nicheBannerType } from './nicheBannerType';
 //import { headerType } from './headerType';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
@@ -69,6 +70,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
 		pageTitleType,
 		modalContentType,
 		singleFeatureBannerType,
+		nicheBannerType,
 		//headerType,
 	],
 };

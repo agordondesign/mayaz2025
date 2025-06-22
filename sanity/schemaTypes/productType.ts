@@ -156,6 +156,34 @@ export const productType = defineType({
 			],
 		}),
 		defineField({
+			name: 'book',
+			title: 'Book',
+			group: 'productDetails',
+			type: 'boolean',
+			initialValue: false,
+		}),
+		defineField({
+			name: 'niche',
+			title: 'Niche',
+			group: 'productDetails',
+			type: 'boolean',
+			initialValue: false,
+		}),
+		defineField({
+			name: 'studioProductTitle',
+			title: 'Studio Product Title',
+			group: 'productDetails',
+			type: 'string',
+			hidden: ({ document }) => !document?.niche,
+		}),
+		defineField({
+			name: 'studioProductSubTitle',
+			title: 'Studio Product Sub Title',
+			group: 'productDetails',
+			type: 'string',
+			hidden: ({ document }) => !document?.niche,
+		}),
+		defineField({
 			name: 'collection',
 			title: 'Collection',
 			group: 'productDetails',
@@ -188,9 +216,29 @@ export const productType = defineType({
 			],
 		}),
 		defineField({
+			name: 'thumbnailFullsize',
+			title: 'Thumbnail Fullsize',
+			description: 'Niche Micro-loc Studio thumbnail image',
+			hidden: ({ document }) => !document?.niche,
+			group: 'productImages',
+			type: 'image',
+			options: {
+				hotspot: true,
+			},
+			fields: [
+				{
+					name: 'alt',
+					title: 'Alternative text',
+					description: 'Important for SEO and accessiblity',
+					type: 'string',
+				},
+			],
+		}),
+		defineField({
 			name: 'productImage',
 			title: 'Product Image',
 			description: 'Product image(s)',
+			hidden: ({ document }) => !!document?.niche,
 			group: 'productImages',
 			type: 'array',
 			of: [
@@ -216,20 +264,6 @@ export const productType = defineType({
 			title: 'Brief Description',
 			group: 'productDetails',
 			type: 'string',
-		}),
-		defineField({
-			name: 'book',
-			title: 'Book',
-			group: 'productDetails',
-			type: 'boolean',
-			initialValue: false,
-		}),
-		defineField({
-			name: 'niche',
-			title: 'Niche',
-			group: 'productDetails',
-			type: 'boolean',
-			initialValue: false,
 		}),
 		defineField({
 			name: 'author',

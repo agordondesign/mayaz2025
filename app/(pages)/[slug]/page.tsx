@@ -10,6 +10,7 @@ import PageContent from '@/components/layout/PageContent';
 import ProductByCollection from '@/components/layout/ProductByCollection';
 import PageTitle from '@/components/ui/PageTitle';
 import HerStory from '@/components/layout/HerStory';
+import NicheBanner from '@/components/layout/NicheBanner';
 
 type PageProps = {
 	params: Promise<{
@@ -64,6 +65,11 @@ export default async function Page({ params }: PageProps) {
 						{section?._type === 'productCollectionList' && (
 							<div>
 								<ProductByCollection section={section} />
+							</div>
+						)}
+						{section?._type === 'nicheBanner' && (
+							<div>
+								<NicheBanner />
 							</div>
 						)}
 					</div>

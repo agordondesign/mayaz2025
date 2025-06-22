@@ -5,6 +5,7 @@ import { urlFor } from '@/sanity/lib/image';
 import Image from 'next/image';
 import type { TypedObject } from '@portabletext/types';
 import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 //import { RxColorWheel } from 'react-icons/rx';
 
 type ProductListProps = {
@@ -58,6 +59,8 @@ export default function ProductList({
 	columns,
 	hideFilter,
 }: ProductListProps) {
+	const pathname = usePathname();
+	const niche = pathname?.includes('niche-micro-loc-studio');
 	const [filter, setFilter] = React.useState('');
 
 	const filterProducts = products.filter((product) => {
@@ -117,7 +120,9 @@ export default function ProductList({
 			)}
 			<div
 				className={`grid grid-cols-2 md:grid-cols-3 ${
-					columns === 6
+					columns === 7
+						? 'lg:grid-cols-7'
+						: columns === 6
 						? 'lg:grid-cols-6'
 						: columns === 5
 						? 'lg:grid-cols-5'
@@ -142,7 +147,11 @@ export default function ProductList({
 										//whileInView={{ opacity: 1 }}
 										transition={{ duration: 0.5 }}
 									>
-										<div className="relative group image-box overflow-hidden">
+										<div
+											className={`relative group ${
+												niche ? 'bg-black/0' : 'image-box'
+											} overflow-hidden`}
+										>
 											<Image
 												src={urlFor(product.thumbnail).url()}
 												alt={product.thumbnail.alt}

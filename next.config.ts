@@ -22,6 +22,16 @@ const nextConfig: NextConfig = {
 				hostname: 'mayaz2025-pi.vercel.app',
 				pathname: '**',
 			},
+			{
+				protocol: 'https',
+				hostname: 'images.unsplash.com',
+				pathname: '**',
+			},
+			{
+				protocol: 'https',
+				hostname: 'avatar.vercel.sh',
+				pathname: '**',
+			},
 		],
 	},
 };
