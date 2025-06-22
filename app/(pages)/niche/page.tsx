@@ -449,7 +449,7 @@ export default async function Page() {
 					</section>
 				</div>
 			</section>
-			<div className="flex flex-col w-screen -ml-2 gap-8 py-8 bg-black overflow-hidden">
+			<div className="flex flex-col w-screen sm:w-full -ml-2 sm:-ml-0 gap-8 py-8 bg-black overflow-hidden">
 				{/*
 				 ** balm
 				 ** ------------------------------------------------------------------------------ >>>
