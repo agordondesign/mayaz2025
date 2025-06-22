@@ -112,7 +112,7 @@ body {
 
 		--chart-5: 340 75% 55%;
 	}
-  .theme {
+	.theme {
 		--animate-marquee: marquee var(--duration) infinite linear;
 		--animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
 	}
@@ -192,6 +192,21 @@ body {
 [data-state='active'] {
 	border-color: #000000;
 	font-weight: 400;
+}
+
+/** SWIPER JS */
+.swiper-button-prev,
+.swiper-button-next {
+	@apply !text-mayazDark/50 hover:!text-mayazDark/100 scale-95 hover:!scale-110 !text-2xl !bg-transparent !border-none transition-all duration-200 ease-in-out;
+}
+.swiper-pagination-bullet {
+	@apply !bg-mayazDark hover:!bg-black !w-2 !h-2 !opacity-70 transition-all duration-200 ease-in-out;
+}
+.swiper-pagination-bullet-active {
+	@apply ring-offset-2 ring-2 ring-black !bg-black !w-3 !h-3;
+}
+.swiper-pagination {
+	@apply flex justify-center items-center gap-2 mb-2;
 }
 
 /** SNIPCART STYLES */
@@ -445,68 +460,68 @@ body {
 }
 /*---break--- */
 @theme inline {
-  @keyframes marquee {
-  from {
-    transform: translateX(0);
+	@keyframes marquee {
+		from {
+			transform: translateX(0);
 		}
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-		}
-	}
-  @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
-		}
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+		to {
+			transform: translateX(calc(-100% - var(--gap)));
 		}
 	}
-  @keyframes marquee {
-  from {
-    transform: translateX(0);
+	@keyframes marquee-vertical {
+		from {
+			transform: translateY(0);
 		}
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-		}
-	}
-  @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
-		}
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+		to {
+			transform: translateY(calc(-100% - var(--gap)));
 		}
 	}
-  @keyframes marquee {
-  from {
-    transform: translateX(0);
+	@keyframes marquee {
+		from {
+			transform: translateX(0);
 		}
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-		}
-	}
-  @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
-		}
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+		to {
+			transform: translateX(calc(-100% - var(--gap)));
 		}
 	}
-  @keyframes marquee {
-  from {
-    transform: translateX(0);
+	@keyframes marquee-vertical {
+		from {
+			transform: translateY(0);
 		}
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+		to {
+			transform: translateY(calc(-100% - var(--gap)));
 		}
 	}
-  @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+	@keyframes marquee {
+		from {
+			transform: translateX(0);
 		}
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+		to {
+			transform: translateX(calc(-100% - var(--gap)));
+		}
+	}
+	@keyframes marquee-vertical {
+		from {
+			transform: translateY(0);
+		}
+		to {
+			transform: translateY(calc(-100% - var(--gap)));
+		}
+	}
+	@keyframes marquee {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(calc(-100% - var(--gap)));
+		}
+	}
+	@keyframes marquee-vertical {
+		from {
+			transform: translateY(0);
+		}
+		to {
+			transform: translateY(calc(-100% - var(--gap)));
 		}
 	}
 }
