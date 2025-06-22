@@ -129,16 +129,16 @@ export default async function Page() {
 			</div>
 
 			{/* shampoo & conditioner */}
-			<section className="flex flex-col xl:grid xl:grid-cols-2 gap-8 w-full p-8 -mt-10">
+			<section className="flex flex-col xl:grid xl:grid-cols-2 gap-8 w-full p-3 sm:p-8 -mt-10">
 				<div>
 					<section className="flex flex-col md:flex-row md:items-start lg:items-start w-full">
-						<div className="w-full lg:w-full md:order-last">
+						<div className="w-full lg:w-full md:order-last pb-4 sm:pb-0">
 							<Image
 								src={urlFor(shampoo?.thumbnailFullsize).url()}
 								alt="texture"
 								width={2000}
 								height={700}
-								className="object-contain object-center w-full h-auto max-h-[650px] md:max-h-[850px]"
+								className="object-contain object-center w-full h-auto max-h-[500px] sm:max-h-[650px] md:max-h-[850px]"
 							/>
 						</div>
 						<div className="w-full lg:w-full space-y-8">
@@ -196,13 +196,13 @@ export default async function Page() {
 				</div>
 				<div>
 					<section className="flex flex-col md:flex-row items-end w-full md:-mt-28 lg:-mt-60 xl:mt-0">
-						<div className="w-full">
+						<div className="w-full pb-4 sm:pb-0">
 							<Image
 								src={urlFor(conditioner?.thumbnailFullsize).url()}
 								alt="texture"
 								width={2000}
 								height={700}
-								className="object-contain object-center w-full h-auto max-h-[650px] md:max-h-[850px] xl-w-full xl:h-[850px]"
+								className="object-contain object-center w-full h-auto max-h-[500px] sm:max-h-[650px] md:max-h-[850px] xl-w-full xl:h-[850px]"
 							/>
 						</div>
 						<div className="w-full space-y-8">
@@ -265,20 +265,20 @@ export default async function Page() {
 				 ** mist spray
 				 ** ------------------------------------------------------------------------------ >>>
 				 */}
-				<div className="flex flex-col items-start justify-between relative bg-[#eeeeee] p-8 w-full h-full">
-					<div className="absolute sm:relative flex flex-col grow left-0 px-6 sm:px-0 sm:-ml-3 top-0 w-full uppercase text-[10rem] sm:text-[12rem] md:text-[14rem] lg:text-[14rem] min-[1290px]:text-[15rem] min-[1442px]:text-[16rem] leading-none font-bold text-mayazNiche">
+				<div className="flex flex-col items-start justify-between relative bg-[#eeeeee] p-3 sm:p-8 w-full h-full overflow-hidden">
+					<div className="absolute sm:relative flex flex-col grow left-0 sm:px-0 sm:-ml-3 top-0 w-full uppercase text-[9rem] sm:text-[12rem] md:text-[14rem] lg:text-[14rem] min-[1290px]:text-[15rem] min-[1442px]:text-[16rem] leading-none font-bold text-mayazNiche">
 						<span className="inline-block md:-mt-2">pure</span>
 						<span className="inline-block -mt-6 md:-mt-12">bala</span>
 						<span className="inline-block -mt-6 md:-mt-12">nce</span>
 					</div>
-					<section className="relative flex flex-col sm:flex-row items-end gap-8 w-full">
+					<section className="relative flex flex-col sm:flex-row items-end gap-4 sm:gap-8 w-full">
 						<div className="relative w-full h-full mr-0 sm:order-last">
 							<Image
 								src={urlFor(mist?.thumbnailFullsize).url()}
 								alt="texture"
 								width={2000}
 								height={700}
-								className="sm:absolute bottom-0 right-0 object-contain object-right sm:object-center w-full h-auto max-h-[700px] md:max-h-[1018px]"
+								className="sm:absolute bottom-0 right-0 object-contain object-right sm:object-center w-full h-auto max-h-[500px] sm:max-h-[700px] md:max-h-[1018px]"
 							/>
 						</div>
 						<div className="w-full space-y-8">
@@ -328,19 +328,19 @@ export default async function Page() {
 					</section>
 				</div>
 				{/* oils ---------------------------------------------------------------------- >>> */}
-				<div className="flex flex-col lg:flex-row xl:flex-col justify-between gap-8 h-full w-full p-8">
+				<div className="flex flex-col lg:flex-row xl:flex-col justify-between gap-8 h-full w-full p-3 sm:p-8">
 					{/*
 					 ** elixir
 					 ** ------------------------------------------------------------------------------ >>>
 					 */}
 					<section className="flex flex-col md:flex-row lg:items-end w-full">
-						<div className="relative w-full lg:order-last xl:order-first">
+						<div className="relative w-full lg:order-last xl:order-first pb-4 sm:pb-0">
 							<Image
 								src={urlFor(elixir?.thumbnailFullsize).url()}
 								alt="texture"
 								width={2000}
 								height={700}
-								className="lg:absolute xl:relative bottom-0 object-contain object-center w-full h-auto max-h-[560px]"
+								className="lg:absolute xl:relative bottom-0 object-contain object-center w-full h-auto max-h-[460px] sm:max-h-[560px]"
 							/>
 						</div>
 						<div className="w-full space-y-8">
@@ -393,13 +393,13 @@ export default async function Page() {
 					 ** ------------------------------------------------------------------------------ >>>
 					 */}
 					<section className="flex flex-col md:flex-row items-end w-full h-full md:-mt-0 lg:mt-0">
-						<div className="relative w-full md:order-last">
+						<div className="relative w-full md:order-last pb-4 sm:pb-0">
 							<Image
 								src={urlFor(serum?.thumbnailFullsize).url()}
 								alt="texture"
 								width={2000}
 								height={700}
-								className="object-contain object-center w-full h-auto max-h-[560px]"
+								className="object-contain object-center w-full h-auto max-h-[460px] sm:max-h-[560px]"
 							/>
 						</div>
 						<div className="w-full space-y-8">
@@ -449,12 +449,12 @@ export default async function Page() {
 					</section>
 				</div>
 			</section>
-			<div className="flex flex-col w-ull gap-8 py-8 bg-black">
+			<div className="flex flex-col w-screen -ml-2 gap-8 py-8 bg-black overflow-hidden">
 				{/*
 				 ** balm
 				 ** ------------------------------------------------------------------------------ >>>
 				 */}
-				<section className="flex gap-8 p-8 w-full">
+				<section className="flex gap-8 p-5 sm:p-8 w-full">
 					<div className="flex flex-col gap-8 w-full max-w-[96rem] mx-auto">
 						<section className="flex flex-col lg:flex-row gap-8 lg:gap-0 justify-end items-end xl:items-center w-full">
 							<div className="flex w-full h-full xl:w-2/5 justify-center lg:items-end">
@@ -520,7 +520,7 @@ export default async function Page() {
 				 ** batana
 				 ** ------------------------------------------------------------------------------ >>>
 				 */}
-				<section className="flex gap-8 p-8 w-full">
+				<section className="flex gap-8 p-5 sm:p-8 w-full">
 					<div className="flex flex-col gap-8 w-full max-w-[96rem] mx-auto">
 						<section className="flex flex-col md:flex-row items-end gap-8 w-full">
 							<div className="w-full md:order-last">
