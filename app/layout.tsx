@@ -5,12 +5,12 @@ import GoogleAnalytics from '@/components/providers/GoogleAnalytics';
 import SnipCart from '@/components/providers/Snipcart';
 import TickerBar from '@/components/layout/TickerBar';
 import Footer from '@/components/layout/Footer';
-import BreakPoints from '@/components/layout/BreakPoints';
+//import BreakPoints from '@/components/layout/BreakPoints';
 import Header from '@/components/layout/Header';
 //import Modal from '@/components/ui/Modal';
 import { getLandingPage } from '@/lib/api';
 import SnipcartCustom from '@/components/ui/SnipcartCustom';
-import IsBlack from '@/components/layout/IsBlack';
+//import IsBlack from '@/components/layout/IsBlack';
 //import { Fragment } from 'react';
 
 export const metadata: Metadata = {
