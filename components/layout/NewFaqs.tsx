@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 
 interface FaqItem {
   question: string;
-  answer: string;
+  answer: TypedObject | TypedObject[] | string;
 }
 
 interface FaqsCardProps {
@@ -79,7 +79,11 @@ const FaqsCard: React.FC<FaqsCardProps> = (props) => {
         style={state ? { height: answerH } : { height: "0px" }}
       >
         <div className="text-gray-500 prose max-w-none prose-a:text-mayazNiche prose-a:no-underline prose-a:hover:text-black">
-          <PortableText value={faqsList.answer} />
+          {Array.isArray(faqsList.answer) ? (
+            <PortableText value={faqsList.answer} />
+          ) : (
+            <span>{faqsList.answer}</span>
+          )}
         </div>
       </div>
     </button>
