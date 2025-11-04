@@ -1,5 +1,6 @@
 "use client";
 import { PortableText } from "@portabletext/react";
+import type { TypedObject } from "@portabletext/types";
 import { useRef, useState } from "react";
 
 interface FaqItem {
