@@ -80,10 +80,11 @@ const FaqsCard: React.FC<FaqsCardProps> = (props) => {
         style={state ? { height: answerH } : { height: "0px" }}
       >
         <div className="text-gray-500 prose max-w-none prose-a:text-mayazNiche prose-a:no-underline prose-a:hover:text-black">
-          {Array.isArray(faqsList.answer) ? (
+          {Array.isArray(faqsList.answer) ||
+          typeof faqsList.answer === "object" ? (
             <PortableText value={faqsList.answer} />
           ) : (
-            <span>{faqsList.answer}</span>
+            <span>{faqsList.answer as string}</span>
           )}
         </div>
       </div>
