@@ -20,21 +20,24 @@ export default function Banner() {
 						<div className="border border-mayazBorder/60 px-4 pt-2 pb-4 lg:p-4">
 							<div className="flex flex-row gap-2 lg:flex-col items-center lg:items-start">
 								<FiBox size={20} />
-								<h3 className="text-sm py-2 font-medium">Free Shipping</h3>
+								<h3 className="text-sm py-2 font-medium">Fast Shipping</h3>
 							</div>
-							<p className="text-xs">Free shipping for nail polish ONLY</p>
-							<p className="text-xs">Guaranteed 2 day delivery</p>
+							<p className="text-xs">Flat Rate Shipping</p>
+							<p className="text-xs">Guaranteed 2 Day Delivery</p>
 						</div>
 						<div className="border border-mayazBorder/60 px-4 pt-2 pb-4 lg:p-4">
 							<div className="flex flex-row gap-2 lg:flex-col items-center lg:items-start">
 								<FiBox size={20} />
-								<h3 className="text-sm py-2 font-medium">Local Pick-up</h3>
+								<h3 className="text-sm py-2 font-medium">Refund & Exchange</h3>
 							</div>
 							<p className="text-xs">
-								Friday after Jumu&apos;ah
-								{/*Mon - Sun 4:30 pm - 6:30 pm*/}
+								<p className="text-xs">
+									Full refund if your product isn&apos;t perfect.
+								</p>
+								<p className="text-xs">
+									Returns are not accepted, exchanges only.
+								</p>
 							</p>
-							<p className="text-xs">Masjid Rahmah, Newark, NJ</p>
 						</div>
 						<div className="border border-mayazBorder/60 px-4 pt-2 pb-4 lg:p-4">
 							<div className="flex flex-row gap-2 lg:flex-col items-center lg:items-start">
@@ -50,7 +53,15 @@ export default function Banner() {
 								<h3 className="text-sm py-2 font-medium">Contact Us</h3>
 							</div>
 							<p className="text-xs">Chat with our concierge at any time.</p>
-							<p className="text-xs">Email us at info@mayazcollection.com</p>
+							<p className="text-xs">
+								Email us at{' '}
+								<a
+									href="mailto:info@mayazpages.com"
+									className="text-stone-500 hover:text-black font-[400]"
+								>
+									info@mayazcollection.com
+								</a>
+							</p>
 						</div>
 					</section>
 					<div className="flex flex-col mt-4 border-t border-mayazBorder/0">

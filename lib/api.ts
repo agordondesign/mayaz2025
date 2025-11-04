@@ -1,19 +1,19 @@
-import { client } from '@/sanity/lib/client';
-import { groq } from 'next-sanity';
+import { client } from "@/sanity/lib/client";
+import { groq } from "next-sanity";
 
 export async function getSiteSettings() {
-	const query = groq`*[_type == "siteSettings"][1]`;
-	const siteSettings = await client.fetch(query);
-	return siteSettings;
+  const query = groq`*[_type == "siteSettings"][0]`;
+  const siteSettings = await client.fetch(query);
+  return siteSettings;
 }
 
 export async function getLandingPage() {
-	const query = groq`*[_type == "landingPage"][0] {
+  const query = groq`*[_type == "landingPage"][0] {
 		...,
 		siteTicker[]->{..., name},
 		collection[]-> {
 			...,
-			collection-> 
+			collection->
 		},
 		categories[]->{..., title},
 		siteTicker[]->{..., name},
@@ -152,24 +152,24 @@ export async function getLandingPage() {
 		},
 		clientTestimonials[]-> { ..., clientName, testimonial}
 	}`;
-	const landingPage = await client.fetch(query);
-	return landingPage;
+  const landingPage = await client.fetch(query);
+  return landingPage;
 }
 
 export async function getSorting() {
-	const query = groq`
+  const query = groq`
 	*[_type == "sorting"] {
 		sortLabel,
 		sortValue,
 	} | order(sortLabel asc)
 	`;
-	const sorting = await client.fetch(query);
-	return sorting;
+  const sorting = await client.fetch(query);
+  return sorting;
 }
 /** (collection) / [slug] - AllProductList */
 export async function getProducts() {
-	const query = groq`*[_type == "product"]{
-		..., 
+  const query = groq`*[_type == "product"]{
+		...,
 		slug,
 		collection-> {
 			...,
@@ -190,13 +190,13 @@ export async function getProducts() {
 			},
 		},
 	}`;
-	const products = await client.fetch(query);
-	return products;
+  const products = await client.fetch(query);
+  return products;
 }
 
 /** (collection) / [slug] / [_id] */
 export async function getProductBySlug(slug: string) {
-	const query = groq`*[_type == "product" && slug.current == $slug][0]
+  const query = groq`*[_type == "product" && slug.current == $slug][0]
     {
       ...,
 			variantColor->{
@@ -230,15 +230,15 @@ export async function getProductBySlug(slug: string) {
 				},
 			}
     }`;
-	const products = await client.fetch(query, {
-		slug,
-	});
-	return products;
+  const products = await client.fetch(query, {
+    slug,
+  });
+  return products;
 }
 
 /** (collection) / [slug] */
 export async function getPageBySlug(slug: string) {
-	const query = groq`*[_type == "page"] {
+  const query = groq`*[_type == "page"] {
 	...,
   slug,
 	_id,
@@ -295,6 +295,17 @@ export async function getPageBySlug(slug: string) {
 		...,
 	},
 }`;
-	const collections = await client.fetch(query, { slug });
-	return collections;
+  const collections = await client.fetch(query, { slug });
+  return collections;
+}
+
+export async function getNicheFaq() {
+  const query = groq`*[_type == "nicheFaq"] {
+  ...,
+  answer,
+  question,
+  _id,
+}`;
+  const faq = await client.fetch(query);
+  return faq;
 }
