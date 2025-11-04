@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 
 interface FaqItem {
   question: string;
-  answer: any;
+  answer: string;
 }
 
 interface FaqsCardProps {
@@ -78,7 +78,7 @@ const FaqsCard: React.FC<FaqsCardProps> = (props) => {
         className="duration-300"
         style={state ? { height: answerH } : { height: "0px" }}
       >
-        <div className="text-gray-500">
+        <div className="text-gray-500 prose max-w-none prose-a:text-mayazNiche prose-a:no-underline prose-a:hover:text-black">
           <PortableText value={faqsList.answer} />
         </div>
       </div>

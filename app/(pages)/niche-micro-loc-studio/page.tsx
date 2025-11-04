@@ -212,7 +212,7 @@ export default async function Page() {
             </div>
             <blockquote className="mt-2 text-sm">
               Sista Sakinah was very informative about the process of getting
-              microlocs. I'm so excited to be on my way for my loc journey.
+              microlocs. I&apos;m so excited to be on my way for my loc journey.
             </blockquote>
             <div className="flex flex-row items-center gap-2">
               <Image
@@ -245,7 +245,7 @@ export default async function Page() {
             </div>
             <blockquote className="mt-2 text-sm">
               I was scared at first to get them because I have been getting
-              doobies for so long, but so far I’m loving this journey,
+              doobies for so long, but so far I&apos;m loving this journey,
               Alhamdulillah
             </blockquote>
             <div className="flex flex-row items-center gap-2">
