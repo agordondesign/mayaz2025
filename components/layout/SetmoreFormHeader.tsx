@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import SetmoreEmbed from "../ui/setmoreEmbed";
+//import SetmoreEmbed from "../ui/setmoreEmbed";
 import Link from "next/link";
 
 export default function SetmoreFormHeader() {
