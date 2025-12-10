@@ -154,7 +154,7 @@ body {
   content: "";
   position: absolute;
   width: calc(20px * 4.47);
-  //border: 0.5px solid rgba(0, 0, 0, 0.4) !important;
+  /* border: 0.5px solid rgba(0, 0, 0, 0.4) !important; */
   border: 0.15px solid rgba(253, 252, 251, 0.5) !important;
   transform: rotate(45deg);
   transform-origin: left;
