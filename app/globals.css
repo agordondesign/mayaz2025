@@ -195,7 +195,7 @@ body {
   font-weight: 400;
 }
 
-/** SWIPER JS (carousel) */
+/** SWIPER JS */
 .swiper-button-prev,
 .swiper-button-next {
   @apply !text-mayazDark/50 hover:!text-mayazDark/100 scale-95 hover:!scale-110 !text-2xl !bg-transparent !border-none transition-all duration-200 ease-in-out;
