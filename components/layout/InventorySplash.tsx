@@ -3,11 +3,25 @@ import * as React from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-const EXCLUDED_PATHS = ["/niche", "/niche-micro-loc-studio", "/niche-booking"];
+const EXCLUDED_PATHS = [
+  "/studio",
+  "/studio/*",
+  "/niche",
+  "/niche-micro-loc-studio",
+  "/niche-booking",
+];
+
+function isExcluded(path: string) {
+  return EXCLUDED_PATHS.some((excluded) =>
+    excluded.endsWith("/*")
+      ? path.startsWith(excluded.replace("/*", "/"))
+      : path === excluded,
+  );
+}
 
 export default function InventorySplash() {
   const pathname = usePathname();
-  if (EXCLUDED_PATHS.includes(pathname)) {
+  if (isExcluded(pathname)) {
     return null;
   }
   return (
