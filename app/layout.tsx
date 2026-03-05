@@ -112,7 +112,7 @@ export default async function RootLayout({
         />
       </head>
       <body className="flex flex-col h-full min-h-screen w-full justify-start">
-        <InventorySplash />
+        {/*<InventorySplash />*/}
         {/*<BreakPoints />*/} {/*responsive testing*/}
         {/*<IsBlack>*/}
         <TickerBar ticker={landingPage.siteTicker} />
