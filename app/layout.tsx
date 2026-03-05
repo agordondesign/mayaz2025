@@ -12,7 +12,7 @@ import { getLandingPage } from "@/lib/api";
 import SnipcartCustom from "@/components/ui/SnipcartCustom";
 //import IsBlack from '@/components/layout/IsBlack';
 //import { Fragment } from 'react';
-import InventorySplash from "@/components/layout/InventorySplash";
+//import InventorySplash from "@/components/layout/InventorySplash";
 
 export const metadata: Metadata = {
   title: "Maÿaz Collection - Beautiful Jilbāb Collection",
