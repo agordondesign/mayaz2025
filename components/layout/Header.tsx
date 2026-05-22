@@ -327,13 +327,13 @@ export default function Header() {
                           Niqābs
                         </Link>
                       </motion.li>
-                      <motion.li variants={sidebarItemVariants} key="niqabs">
+                      <motion.li variants={sidebarItemVariants} key="beauty">
                         <Link
-                          href="/kids-garments"
+                          href="/beauty"
                           className="block px-16 py-4 hover:bg-mayaz/20"
                           onClick={menuToggle}
                         >
-                          Kids Garments
+                          Beauty
                         </Link>
                       </motion.li>
                       <motion.li
@@ -357,7 +357,7 @@ export default function Header() {
                           Books
                         </Link>
                       </motion.li>
-
+                      {/*
                       <motion.li
                         variants={sidebarItemVariants}
                         key="mersi-nail-polish"
@@ -380,6 +380,7 @@ export default function Header() {
                           <span className="text-base">Nail Polish</span>
                         </Link>
                       </motion.li>
+                      */}
                       <motion.li variants={sidebarItemVariants} key="her-story">
                         <Link
                           href="/her-story"
