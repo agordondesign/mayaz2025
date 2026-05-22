@@ -129,8 +129,8 @@ export default function ComponentName() {
                   </p>
                   <span className="text-xs text-gray-500">Base Price</span>
                   <span className="text-xs text-gray-500">
-                    Price is based on the client's specific issue and is subject
-                    to change
+                    Price is based on the client&apos;s specific issue and is
+                    subject to change
                   </span>
                 </div>
               </div>
