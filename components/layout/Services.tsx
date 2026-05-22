@@ -1,11 +1,12 @@
 import * as React from "react";
 import { CircleCheckBig } from "lucide-react";
 
-type ComponentNameProps = {
+/*type ComponentNameProps = {
   propName: string;
 };
+*/
 
-export default function ComponentName({ propName }: ComponentNameProps) {
+export default function ComponentName() {
   return (
     <section className="flex flex-col gap-4 w-full p-4 lg:px-16 lg:p-8">
       <header className="space-y-4 mb-8">
