@@ -110,6 +110,10 @@ export default async function RootLayout({
         <GoogleAnalytics
           GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_MEASUREMENT_ID as string}
         />
+        <meta
+          name="facebook-domain-verification"
+          content="3lmxr53mi1130qapbuniq7ekstcr3n"
+        />
       </head>
       <body className="flex flex-col h-full min-h-screen w-full justify-start">
         {/*<InventorySplash />*/}
