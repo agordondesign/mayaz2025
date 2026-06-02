@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/next';
 import GoogleAnalytics from "@/components/providers/GoogleAnalytics";
 import SnipCart from "@/components/providers/Snipcart";
 import TickerBar from "@/components/layout/TickerBar";
@@ -134,6 +135,7 @@ export default async function RootLayout({
 					*/}
         <SnipCart />
         {/*</IsBlack>*/}
+        <Analytics />
       </body>
     </html>
   );
