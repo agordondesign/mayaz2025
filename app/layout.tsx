@@ -13,6 +13,7 @@ import SnipcartCustom from "@/components/ui/SnipcartCustom";
 //import IsBlack from '@/components/layout/IsBlack';
 //import { Fragment } from 'react';
 //import InventorySplash from "@/components/layout/InventorySplash";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Maÿaz Collection - Beautiful Jilbāb Collection",
@@ -114,6 +115,12 @@ export default async function RootLayout({
           name="facebook-domain-verification"
           content="3lmxr53mi1130qapbuniq7ekstcr3n"
         />
+        {/*Umami analytics */}
+        <Script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="a6ed5538-432e-4887-a5b0-240658dfa6cd"
+        ></Script>
       </head>
       <body className="flex flex-col h-full min-h-screen w-full justify-start">
         {/*<InventorySplash />*/}
