@@ -357,7 +357,7 @@ export default function Header() {
                           Books
                         </Link>
                       </motion.li>
-                      {/*
+
                       <motion.li
                         variants={sidebarItemVariants}
                         key="mersi-nail-polish"
@@ -380,7 +380,7 @@ export default function Header() {
                           <span className="text-base">Nail Polish</span>
                         </Link>
                       </motion.li>
-                      */}
+
                       <motion.li variants={sidebarItemVariants} key="her-story">
                         <Link
                           href="/her-story"
