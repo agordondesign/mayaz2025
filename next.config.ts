@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
         source: "/links",
         destination: "https://mayaz-collection-web.vercel.app/links",
         permanent: true,
-      }
+      },
       {
         source: "/Ma%C3%BFaz_Collection.vcf",
         destination: "https://www.nichemicrolocs.com/links",
